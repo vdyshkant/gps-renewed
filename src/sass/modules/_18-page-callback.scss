@@ -1,0 +1,128 @@
+/* === Page 'callback' === */
+
+
+.page-callback {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}
+
+
+.page-callback {
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+.page-callback {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-callback {
+  & .btn--page-callback {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+.page-callback {
+  & .content-table-row {
+    @include clearfix;
+  }
+}
+
+.page-callback {
+  & .content-table-cell__left {
+    float: left;
+    width: 45%;
+    margin-right: 10%;
+    @media #{$mobile} {
+      width: 48%;
+      margin-right: 4%;
+    }
+  }
+}
+
+.page-callback {
+  & .content-table-cell__right {
+    float: right;
+    width: 45%;
+    @media #{$mobile} {
+      width: 48%;
+    }
+  }
+}
+
+.page-callback {
+  & .content-table {
+    margin-bottom: 50px;
+    & input {
+
+    }
+  }
+}
+
+.page-callback {
+  & .form-content {
+    width: 90%;
+    margin-bottom: 40px;
+    @media #{$mobile} {
+      width: 100%;
+    }
+  }
+}
+
+.page-callback {
+  & .btn {
+    width: 45%;
+    @media #{$mobile} {
+      width: 100%;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .page-callback {
+    & .main {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+}
+
+
+
+
+//
+.page-callback {
+  & .content {
+
+  }
+}
+
+.page-callback {
+  & .content {
+
+  }
+}

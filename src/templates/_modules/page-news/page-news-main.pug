@@ -1,0 +1,69 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' }
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Новости
+        .content-news
+          .news-item
+            .news-item__thumbnail
+              img(src='img/trump2.jpg' )
+            .news-item__short-desc
+              .short-desc__title Срочность и оперативность доставки
+              .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
+              a.short-desc__link(href="") Читать дальше
+          .news-item
+            .news-item__thumbnail
+              img(src='img/trump2.jpg' )
+            .news-item__short-desc
+              .short-desc__title Срочность и оперативность доставки
+              .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
+              a.short-desc__link(href="") Читать дальше
+          .news-item
+            .news-item__thumbnail
+              img(src='img/trump2.jpg' )
+            .news-item__short-desc
+              .short-desc__title Срочность и оперативность доставки
+              .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
+              a.short-desc__link(href="") Читать дальше
+          .news-item
+            .news-item__thumbnail
+              img(src='img/trump2.jpg' )
+            .news-item__short-desc
+              .short-desc__title Срочность и оперативность доставки
+              .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
+              a.short-desc__link(href="") Читать дальше
+          .news-item
+            .news-item__thumbnail
+              img(src='img/trump2.jpg' )
+            .news-item__short-desc
+              .short-desc__title Срочность и оперативность доставки
+              .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
+              a.short-desc__link(href="") Читать дальше
+          .news-item
+            .news-item__thumbnail
+              img(src='img/trump2.jpg' )
+            .news-item__short-desc
+              .short-desc__title Срочность и оперативность доставки
+              .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
+              a.short-desc__link(href="") Читать дальше
+        .pagination
+          //- a.pagination__first First
+          //- a.pagination__prev prev
+          a.pagination__page 1
+          span.pagination__active 2
+          a.pagination__page 3
+          //- a.pagination__next next
+          //- a.pagination__last Last

@@ -1,0 +1,65 @@
+/* === Page 'single-news' === */
+
+
+.page-single-news {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}
+
+
+.page-single-news {
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+
+.page-single-news {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+
+.page-single-news {
+  & .title {
+    @media #{$mobile} {
+      font-size: 14px;
+    }
+  }
+}
+
+
+.page-single-news {
+  & .btn {
+    float: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+//
+.page-single-news {
+  & .content {
+
+  }
+}
+
+.page-single-news {
+  & .content {
+
+  }
+}

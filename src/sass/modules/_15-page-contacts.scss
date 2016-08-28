@@ -1,0 +1,71 @@
+/* === Page 'contacts' === */
+
+
+.page-contacts {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}
+
+
+.page-contacts {
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+.page-contacts {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-contacts {
+  & .btn--contacts {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+.page-contacts {
+  & .sub-title {
+    max-width: 500px;
+  }
+}
+
+
+
+
+
+
+
+//
+.page-contacts {
+  & .content {
+
+  }
+}
+
+.page-contacts {
+  & .content {
+
+  }
+}

@@ -1,0 +1,101 @@
+/* === Page 'schedule' === */
+
+
+.page-schedule {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}
+
+
+.page-schedule {
+  & .form-content {
+    margin-bottom: 60px;
+  }
+}
+
+.page-schedule {
+  & .content {
+    margin-bottom: 60px;
+  }
+}
+
+.page-schedule {
+  & .main {
+    position: relative;
+    z-index: -1;
+  }
+}
+
+// table
+
+.page-schedule {
+  & .content-table {
+    width: 330px;
+    @media #{$mobile} {
+      width: 288px;
+    }
+  }
+}
+
+.page-schedule {
+  & .content-table-cell {
+    font-size: 14px;
+    line-height: 22px;
+    color: #5B5B5B;
+    width: 50%;
+    margin-bottom: 15px;
+
+  }
+}
+
+.page-schedule {
+  & .content-table-row {
+    @include clearfix;
+  }
+}
+
+.page-schedule {
+  & .content-table-cell__right {
+    float: right;
+  }
+}
+
+.page-schedule {
+  & .content-table-cell__left {
+    font-weight: 700;
+    float: left;
+    width: 125px;
+    @media #{$mobile} {
+      width: 50%;
+    }
+  }
+}
+//  eof table
+
+.page-schedule {
+  & .sub-title {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+//
+.page-schedule {
+  & .content {
+
+  }
+}
+
+.page-schedule {
+  & .content {
+
+  }
+}

@@ -1,0 +1,46 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+       { 'anchor':'На главную','link':'/index.html' },
+     ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Ближайшее отделение
+        form.form-content.form-nearest
+          input.search-field(type="search" placeholder="Найти...")
+          label
+            span Город
+            .select-essence
+              select
+                option Алматы
+                option опцияАстана
+                option опцияАстана
+                option опцияАстана
+              i.fa.fa-angle-down(aria-hidden="true")
+          label
+            span № отделения
+            .select-essence
+              select
+                option опция
+                option опция
+                option опция
+                option опция
+              i.fa.fa-angle-down(aria-hidden="true")
+          label
+            span Тип отделения
+            .select-essence
+              select
+                option опция
+                option опция
+                option опция
+              i.fa.fa-angle-down(aria-hidden="true")

@@ -1,0 +1,28 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'Главная','link':'/index.html' },
+      { 'anchor':'Услуги и тарифы','link':'/index.html' },
+      { 'anchor':'Super express доставка', 'class':'active--strong' }
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title <span>Super Express</span> доставка
+        p.sub-title Экспресс-доставка по Республике Казахстан документов и грузов по принципу "из рук в руки", "от двери до двери" до конца рабочего дня
+        ul.content-list
+          li вес до 300 кг.;
+          li максимальный вес одного места - 30 кг.;
+          li доставка по всему Казахстану;
+          li широкий спектр дополнительных услуг;
+          li уведомление о доставке.
+
+        button.btn(type="submit") Загрузить прайс-лист

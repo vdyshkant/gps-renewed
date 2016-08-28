@@ -1,0 +1,65 @@
+/* === Page 'terms' === */
+
+
+.page-terms {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}
+
+
+.page-terms {
+  & .inner {
+    @include clearfix;
+  }
+}
+
+.page-terms {
+  & .form-content {
+    margin-bottom: 60px;
+  }
+}
+
+.page-terms {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+.page-terms {
+  & .content-table-row {
+    @include clearfix;
+    margin-bottom: 20px;
+  }
+}
+
+.page-terms {
+  & .content-table-cell__left {
+    float: left;
+    max-width: 170px;
+    min-width: 170px;
+    @media #{$mobile-tablet} {
+      float: none;
+    }
+    @media #{$laptop} {
+      float: none;
+    }
+  }
+}
+
+.page-terms {
+  & .content-table-cell__right {
+    float: right;
+    width: 350px;
+    width: 60%;
+    @media #{$mobile-tablet} {
+      float: none;
+      width: 100%;
+    }
+    @media #{$laptop} {
+      float: none;
+      width: 100%;
+    }
+  }
+}

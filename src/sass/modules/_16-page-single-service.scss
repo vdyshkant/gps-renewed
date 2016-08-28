@@ -1,0 +1,71 @@
+/* === Page 'single-service' === */
+
+
+.page-single-service {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}
+
+
+.page-single-service {
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+.page-single-service {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-single-service {
+  & .btn--page-single-service {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+.page-single-service {
+  & .title {
+    margin-bottom: 50px;
+  }
+}
+
+.page-single-service {
+  & .btn {
+    float: none;
+  }
+}
+
+
+.page-single-service {
+  & .content-list {
+    margin-bottom: 80px;
+  }
+}
+
+.page-single-service {
+  & .content {
+
+  }
+}

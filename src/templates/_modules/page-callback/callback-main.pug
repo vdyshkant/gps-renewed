@@ -1,0 +1,35 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' },
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Заказать звонок
+        form.form-content
+          .content-table
+            .content-table-row
+              .content-table-cell.content-table-cell__left
+                span Имя
+                input
+              .content-table-cell.content-table-cell__right
+                span Фамилия
+                input
+            .content-table-row
+              .content-table-cell.content-table-cell__left
+                span Телефон
+                input
+              .content-table-cell.content-table-cell__right
+                span Email
+                input
+          button.btn(type="submit") Отправить

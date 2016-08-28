@@ -1,0 +1,41 @@
+extends conf/docwrapper
+
+
+append config
+  - var PageTitle = 'SUPER EXPRESS ДОСТАВКА'
+  //- - var MetaDesc = 'Now we override default configed MetaDesc'
+  - var jQuery = true
+  - var fontAwesome = true
+
+  //- - var mainJsSrc = 'js/main.min.js'
+  - var updateBodyClass = bodyClasses.push('page-single-service')
+
+  //- - var GoogleFonts = 'Poiret+One'
+  //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
+  //- ...
+
+append stylesheets
+  //- link( href='css/extrastyles.css', rel='stylesheet' )
+
+
+  //- eof HEAD appends
+  //- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+block content
+  .wrapper
+
+
+    //- include _modules/header
+
+    .main-mask
+    main.main
+      include _modules/page-single-service/page-single-service-main
+
+    include _modules/page-single-service/page-single-service-menu
+
+    include _modules/user-block
+
+    include _modules/footer
+
+include _modules/modal-content

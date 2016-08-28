@@ -1,0 +1,386 @@
+/* === Page 'tools' === */
+
+
+// .page-tools {
+//   background: url("../img/main_bg4.jpg") center no-repeat;
+// }
+
+
+.page-tools {
+  background: #fff;
+  & .main {
+    width: 80%;
+    @media #{$tablet} {
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    @media #{$mobile} {
+      width: 100%;
+    }
+  }
+}
+
+.page-tools {
+  & .sub-title {
+    margin-bottom: 0;
+  }
+}
+
+.page-tools {
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+.page-tools {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-tools {
+  & .btn--page-tools {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+.page-tools {
+  & .user-block__menu .fa {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+  & .user-block__menu__item__link {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+  & .user-block__menu__item__title {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+  & .lang .lang__link {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+}
+
+.page-tools {
+  & .tool-container {
+    @include clearfix;
+    margin-bottom: 15px;
+
+    // outline: 2px dashed yellowgreen;
+    // outline-offset: -2px;
+
+  }
+}
+
+.page-tools {
+  & .tool__items {
+    float: left;
+    width: 60%;
+    @media #{$laptop} {
+      width: 40%;
+    }
+    @media #{$tablet} {
+      width: 60%;
+    }
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.page-tools {
+  & .tool__items__wrapper {
+    @include clearfix;
+    @media #{$mobile} {
+      width: 260px;
+      margin: 0 auto;
+      & .tool__item:nth-child(2n){
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.page-tools {
+  & .tool__item {
+    position: relative;
+    float: left;
+    display: block;
+    width: 20%;
+    min-width: 120px;
+    margin-right: 2.5%;
+
+    // outline: 2px dashed crimson;
+    // outline-offset: -2px;
+
+
+    color: #fff;
+    background-color: #3E8AE2;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    transition: background-color 0.7s ease-out;
+    // height: 210px;
+    cursor: pointer;
+    // &:last-child {
+    //   margin-right: 0;
+    // }
+    @media #{$laptop} {
+      margin-right: 20px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(3) {
+        clear: both;
+      }
+    }
+    @media #{$tablet} {
+      margin-right: 20px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(3) {
+        clear: both;
+      }
+    }
+
+    @media #{$mobile} {
+      margin-right: 20px;
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 20px;
+      }
+      &:nth-child(3) {
+        clear: both;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    &:hover {
+      background-color: #034287;
+    }
+  }
+}
+
+
+.page-tools {
+  & .tool__item {
+    & .fa {
+      font-size: 80px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.page-tools {
+  & .tool__item {
+    & p {
+      display: block;
+      height: 34px;
+      font-size: 14px;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.page-tools {
+  & .courier-contact {
+    width: 40%;
+    padding-right: 10%;
+    float: right;
+    @media #{$laptop} {
+      width: 60%;
+    }
+    @media #{$tablet} {
+      width: 40%;
+      padding-right: 0;
+    }
+    @media #{$mobile} {
+      width: 100%;
+    }
+    // outline: 2px dashed gold;
+    // outline-offset: -2px;
+  }
+}
+
+.page-tools {
+  & .courier-contact .row {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-tools {
+  & .courier-contact p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #5b5b5b;
+  }
+}
+
+.page-tools {
+  & .form-courier {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.page-tools {
+  & .form-container {
+    @include clearfix;
+  }
+}
+
+.page-tools {
+  & .form-courier-btm-row {
+    @include clearfix;
+    & .form-courier-column {
+      float: left;
+      width: 28%;
+      margin-right: 5%;
+      text-align: right;
+      @media #{$tablet} {
+        width: 30%;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      @media #{$mobile} {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+    & .half.form-courier-column {
+      position: relative;
+      @media #{$mobile} {
+        margin-bottom: 25px;
+      }
+      & span {
+        font-size: 16px;
+        line-height: 40px;
+        color: #5b5b5b;
+        margin-right: 20px;
+        @media #{$laptop} {
+          margin-right: 5px;
+        }
+        @media #{$tablet} {
+          margin-right: 3px;
+          position: absolute;
+          top: -35px;
+          left: 0;
+        }
+      }
+      & input {
+        width: 50%;
+        float: right;
+        @media #{$tablet} {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.page-tools {
+  & .form-courier-column {
+    width: 28%;
+    float: left;
+    margin-right: 5%;
+    @media #{$tablet} {
+      width: 30%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    @media #{$mobile} {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+
+.page-tools {
+  & .btn--tools {
+    width: 100%;
+    padding: 13px 0;
+  }
+}
+
+.page-tools {
+  & label {
+    font-size: 14px;
+    & span {
+      margin-left: 0;
+      @media #{$mobile} {
+        margin-left: 20px;
+      }
+    }
+    @media #{$mobile} {
+      margin-top: 0;
+    }
+  }
+  & .courier-text-outer {
+    height: 48px;
+    position: relative;
+    & span {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.page-tools {
+  & .content {
+
+  }
+}

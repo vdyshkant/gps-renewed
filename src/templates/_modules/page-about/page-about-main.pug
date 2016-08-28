@@ -1,0 +1,78 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+.wrap
+  .inner
+    //- .breadcrumb
+    //-   a.breadcrumb__link(href="/") На главную
+    +breadcrumbs([
+       { 'anchor':'На главную','link':'/index.html' },
+     ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title О компании
+        p.content-text
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptate non sapiente molestiae pariatur ducimus ad! Officia fugiat sequi omnis fuga doloribus eos! Voluptatum harum sapiente consequatur iure, eos sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, id sint doloribus sequi incidunt, totam velit ut magnam deserunt molestias non minima laboriosam suscipit nemo reprehenderit aut labore rem officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus asperiores molestias, consequuntur deserunt atque, ab temporibus neque nobis minima iste officia
+        p.content-text
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptate non sapiente molestiae pariatur ducimus ad! Officia fugiat sequi omnis fuga doloribus eos! Voluptatum harum sapiente consequatur iure, eos sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, id sint doloribus sequi incidunt, totam velit ut magnam deserunt molestias non minima laboriosam suscipit nemo reprehenderit aut labore rem officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus asperiores molestias, consequuntur deserunt atque, ab temporibus neque nobis minima iste officia
+
+        section.content__advantages
+          h3.content__advantages__title.blue-title Наши преимущества
+          .content__advantages__table
+            .content__advantages__row
+              .content__advantages__cell
+                .content__advantages__num 1
+                p.content__advantages__essense Самая развитая региональная сеть доставок по РК
+              .content__advantages__cell
+                .content__advantages__num 2
+                p.content__advantages__essense 12 лет надежной службы только для наших клиентов
+              .content__advantages__cell
+                .content__advantages__num 3
+                p.content__advantages__essense Гарантируем качество нашей доставки
+              .content__advantages__cell
+                .content__advantages__num 4
+                p.content__advantages__essense Доставка под роспись получателя лично в руки без оплаты
+
+        section.content__honors
+          h3.content__honors__title.blue-title Наши награды
+          .content__honors__table
+            .content__honors__row
+              .content__honors__cell
+                figure
+                  img(src="img/award.png")
+              .content__honors__cell
+                figure
+                  img(src="img/award.png")
+              .content__honors__cell
+                figure
+                  img(src="img/award.png")
+              .content__honors__cell
+                figure
+                  img(src="img/award.png")
+              .content__honors__cell
+                figure
+                  img(src="img/award.png")
+
+        section.content__partners
+          h3.content__partners__title.blue-title Наши партнеры
+          .content__partners__table
+            .content__partners__row
+              .content__partners__cell
+                figure
+                  img(src="img/fedex.png")
+              .content__partners__cell
+                figure
+                  img(src="img/fedex.png")
+              .content__partners__cell
+                figure
+                  img(src="img/fedex.png")
+              .content__partners__cell
+                figure
+                  img(src="img/fedex.png")

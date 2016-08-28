@@ -1,0 +1,63 @@
+/* === Page 'services-prives' === */
+
+
+.page-services-prices {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+}
+
+
+.page-services-prices {
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+
+.page-services-prices {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-services-prices {
+  & .btn--page-services-prices {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+
+
+
+
+
+
+//
+.page-services-prices {
+  & .content {
+
+  }
+}
+
+.page-services-prices {
+  & .content {
+
+  }
+}

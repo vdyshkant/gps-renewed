@@ -1,0 +1,41 @@
+extends conf/docwrapper
+
+
+append config
+  - var PageTitle = 'Сроки доставки'
+  //- - var MetaDesc = 'Now we override default configed MetaDesc'
+  - var jQuery = true
+  - var fontAwesome = true
+
+  //- - var mainJsSrc = 'js/main.min.js'
+  - var updateBodyClass = bodyClasses.push('page-terms')
+
+  //- - var GoogleFonts = 'Poiret+One'
+  //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
+  //- ...
+
+append stylesheets
+  //- link( href='css/extrastyles.css', rel='stylesheet' )
+
+
+  //- eof HEAD appends
+  //- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+block content
+  .wrapper
+
+
+    //- include _modules/header
+
+    .main-mask
+    main.main
+      include _modules/page-terms/main
+
+    include _modules/page-terms/menu
+
+    include _modules/user-block
+
+    include _modules/footer
+
+include _modules/modal-content

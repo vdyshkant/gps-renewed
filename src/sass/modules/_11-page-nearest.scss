@@ -1,0 +1,9 @@
+/* === Page 'nearest' === */
+
+
+.page-nearest {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+  @media #{$mobile-tablet} {
+    background: none;
+  }
+}

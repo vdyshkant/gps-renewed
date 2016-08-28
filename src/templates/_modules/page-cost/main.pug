@@ -1,0 +1,79 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' },
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Стоимость доставки
+        p.sub-title Данный сервис поможет Вам узнать ориентировочную стоимость доставки Вашего отправления
+        form.form-content
+          .content-table
+            .content-table-body
+              .content-table-row
+                .content-table-cell.content-table-cell__left Маршрут
+                .content-table-cell.content-table-cell__right
+                  .content-table-subcell
+                    label
+                      span Откуда
+                      input(type="text")
+                  .content-table-subcell
+                    label
+                      span Куда
+                      input(type="text")
+                  .content-table-subcell
+              .content-table-row
+                .content-table-cell.content-table-cell__left Вид доставки
+                .content-table-cell.content-table-cell__right
+                  .content-table-subcell
+                    .select-essence
+                      select
+                        option Express
+                        option ems
+                        option dhl
+                        option aircraft
+                      i.fa.fa-angle-down(aria-hidden="true")
+                  .content-table-subcell
+                  .content-table-subcell
+              .content-table-row
+                .content-table-cell.content-table-cell__left Фактический вес
+                .content-table-cell.content-table-cell__right
+                  .content-table-subcell
+                    input(type="text")
+                  .content-table-subcell
+                  .content-table-subcell
+              .content-table-row
+                .content-table-cell.content-table-cell__left Габариты доставки
+                .content-table-cell.content-table-cell__right
+                  .content-table-subcell
+                    label
+                      span Длина
+                      input(type="text")
+                  .content-table-subcell
+                    label
+                      span Ширина
+                      input(type="text")
+                  .content-table-subcell
+                    label
+                      span Высота
+                      input(type="text")
+              .content-table-row
+                .content-table-cell.content-table-cell__left Обьявленная стоимость
+                .content-table-cell.content-table-cell__right
+                  .content-table-subcell
+                    input(type="text")
+                  .content-table-subcell
+                  .content-table-subcell
+          button.btn.btn--terms(type="submit") Расcчитать стоимость
+          a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"]').val('');") Очистить

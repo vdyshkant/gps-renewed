@@ -1,0 +1,51 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' },
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Сроки доставки
+        p.sub-title Данный сервис поможет Вам узнать ориентировочную дату доставки Вашего отправления
+        form.form-content.form-nearest
+          .content-table
+            .content-table-row
+              .content-table-cell.content-table-cell__left
+                span Дата отправки
+              .content-table-cell.content-table-cell__right
+                input(type="date")
+            .content-table-row
+              .content-table-cell.content-table-cell__left
+                span Город-отправитель
+              .content-table-cell.content-table-cell__right
+                .select-essence
+                  select
+                    option Алматы
+                    option опцияАстана
+                    option опцияАстана
+                    option опцияАстана
+                  i.fa.fa-angle-down(aria-hidden="true")
+            .content-table-row
+              .content-table-cell.content-table-cell__left
+                span Город-получатель
+              .content-table-cell.content-table-cell__right
+                .select-essence
+                  select
+                    option Актобе
+                    option опцияАктобе
+                    option опцияАктобе
+                    option опцияАктобе
+                  i.fa.fa-angle-down(aria-hidden="true")
+          button.btn.btn-form.btn--terms(type="submit") Рассчитать дату
+          a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"], input[type=\"date\"]').val('');") Очистить

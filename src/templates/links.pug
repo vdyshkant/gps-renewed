@@ -1,0 +1,51 @@
+extends conf/docwrapper
+
+
+append config
+  - var PageTitle = 'Ближайшее отделение'
+  //- - var MetaDesc = 'Now we override default configed MetaDesc'
+  - var jQuery = true
+  - var fontAwesome = true
+
+  //- - var mainJsSrc = 'js/main.min.js'
+  - var updateBodyClass = bodyClasses.push('page-nearest')
+
+  //- - var GoogleFonts = 'Poiret+One'
+  //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
+  //- ...
+
+append stylesheets
+  //- link( href='css/extrastyles.css', rel='stylesheet' )
+
+
+  //- eof HEAD appends
+  //- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+block content
+  .wrapper
+
+
+
+    //- include _modules/header
+
+    .main-mask
+    main.main
+      section.links
+        a(href="http://static.ucttest.in.ua/gps-v2/page-schedule.html") schedule
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-terms.html") сроки
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-cost.html") cost
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-nearest.html") ближайшие отделения
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-callback.html") перезвон
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-contacts.html") контакты
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-single-news.html") новость
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-single-service.html") сервис услуга
+        br
+        a(href="http://static.ucttest.in.ua/gps-v2/page-news.html") новости

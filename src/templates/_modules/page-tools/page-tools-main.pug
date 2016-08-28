@@ -1,0 +1,95 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' }
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Онлайн инструменты
+
+        .tool-container
+          .tool__items
+            .tool__items__wrapper
+              a.tool__item
+                i.fa.fa-cube(aria-hidden="true")
+                p Вызов курьера
+              a.tool__item
+                i.fa.fa-cube(aria-hidden="true")
+                p Отслеживание
+              a.tool__item
+                i.fa.fa-cube(aria-hidden="true")
+                p Тарифы и сроки
+              a.tool__item
+                i.fa.fa-cube(aria-hidden="true")
+                p Тарифный калькулятор
+          .courier-contact
+            .row
+              p Вызов курьера осуществляется
+              p с 9:00 до 18:00
+            .row
+              p Вызвать курьера Вы можете позвонив по телефону
+              p +7 776 383-83-83
+              p +7 776 383-83-83
+
+        p.sub-title Для вызова курьера заполние форму:
+        form.form-courier
+          .form-container
+            .form-courier-column
+              label
+                .courier-text-outer
+                  span ФИО
+                input(type="text")
+              label
+                .courier-text-outer
+                  span Телефон
+                input(type="text")
+              label
+                .courier-text-outer
+                  span Адрес отправителя
+                input(type="text")
+            .form-courier-column
+              label
+                .courier-text-outer
+                  span Вид отправки
+                .select-essence
+                  select
+                    option Пакет
+                    option Покрышки
+                    option Палеты
+                    option Конверт
+                  i.fa.fa-angle-down(aria-hidden="true")
+              label
+                .courier-text-outer
+                  span Пункт назначения
+                input(type="text")
+              label
+                .courier-text-outer
+                  span Страховая сумма
+                input(type="text")
+            .form-courier-column
+              label
+                .courier-text-outer
+                  span Общий вес
+                input(type="text")
+              label
+                .courier-text-outer
+                  span Объем
+                input(type="text")
+          .form-courier-btm-row
+            .form-courier-column.empty &nbsp;
+            .form-courier-column.half
+              span Введите код:
+              input(type="text")
+            .form-courier-column
+              button.btn.btn--tools(type="submit") Расчитать дату
+              a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"]').val('');") Очистить
