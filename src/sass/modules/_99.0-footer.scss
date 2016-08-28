@@ -40,9 +40,10 @@
     float: left;
 
     color: rgb(91, 91, 91);
+    color: #757575;
     font-size: 12px;
     padding: 2px 0;
-    font-weight: 700;
+    // font-weight: 700;
     height: 18px;
     @media #{$desktop} {
       padding-left: 20px;

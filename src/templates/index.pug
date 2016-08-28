@@ -2,13 +2,13 @@ extends conf/docwrapper
 
 
 append config
-  - var PageTitle = 'Услуги и тарифы'
+  - var PageTitle = 'График работы отделений'
   //- - var MetaDesc = 'Now we override default configed MetaDesc'
   - var jQuery = true
   - var fontAwesome = true
 
   //- - var mainJsSrc = 'js/main.min.js'
-  - var updateBodyClass = bodyClasses.push('page-services-prices')
+  - var updateBodyClass = bodyClasses.push('page-schedule')
 
   //- - var GoogleFonts = 'Poiret+One'
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
@@ -30,9 +30,9 @@ block content
 
     .main-mask
     main.main
-      include _modules/page-services-prices/services-prices-main
+      include _modules/page-schedule/main
 
-    include _modules/page-services-prices/services-prices-menu
+    include _modules/page-schedule/menu
 
     include _modules/user-block
 

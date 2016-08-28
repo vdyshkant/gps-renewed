@@ -1,0 +1,100 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' }
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Услуги и тарифы
+
+        //- top block: tarifs and important
+        .services
+          .services-left
+            .services-left-wrapper
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span EXPRESS
+                  span доставка
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span SUPER EXPRESS
+                  span доставка
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span EXPRESS 12-00
+                  span доставка
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span Доставка грузов
+                  span железнодорожным
+                  span транспортом
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span Транспортные
+                  span и дополнительные
+                  span услуги
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span Тарифы на доставку
+                  span корреспонденции
+                  span по городу
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span Доставка отчетностей
+                  span по г.Алматы
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span Доставка посылок
+                  span по городу
+              a.services__item
+                i.fa.fa-cube(aria-hidden="true")
+                p
+                  span Дополнительные
+                  span услуги
+          .services-right
+            p Важно!
+            p Для расчета стоимости доставки грузов в тарифную зону.
+            p 1. Найдите в таблице населенные пункты отправления и получения
+            p 2. На пересечениии населенных пунктов отправления и получения будет указан номер тарифной зоны
+            p 3. Используйте номер тарифной зоны для определения стоимости тарифа Вашего отправления
+        //- bottom block: prices
+        .prices
+          section.prices__item
+            h3.prices__title Тариф на пересылку отправлений с объявленной стоимостью
+            p.prices__item__text Обязательная минимальная объявленная ценность Отправлений по республике Казахстан составляет 15000 тенге. Максимальная объявленная ценность - 1500000 тенге. Сверх весового тарифа плата за оценивание 1 (одно) отправление (место) взимается от суммы объявленной стоимости.
+          section.prices__item
+            h3.prices__title Повышающие коэфициенты
+            ul.prices__list
+              li
+                p.prices__text за доставку посылок свыше 20 кг. на определенный этаж, взимается тариф за каждый этаж, в тенге
+                .prices__factor 500,00
+              li
+                p.prices__text за посылки с грифом "Осторожно, стекло!", "Не кантовать!", "сверху не ставить!" взимается к сумме платы повышающий коэфициент
+                .prices__factor 1,5
+              li
+                p.prices__text за посылки с грифом "Температурный режим" взимается к сумме платы повышающий коэфициент
+                .prices__factor 1,5
+              li
+                p.prices__text за посылки размером свыше 180*130*80 см одной из сторон и одно место весом более 180 кг к основному тарифу применяется коэфициент
+                .prices__factor 1,5
+              li
+                p.prices__text за доставку отправления в выходные и праздничные дни к основному тарифу применяется коэфициент
+                .prices__factor 2,0
