@@ -3,7 +3,9 @@ $( document ).ready(function() {
 
   (function() {
 
-    if (!$('.menu-home')) {
+    var isPageHome = $('.page-home');
+    // if (!isPageHome) {
+    if($('body').is('.js-menu')){
       var string_1 = 'GPS';
       $('.logo__text').text(string_1);
       $('.logo__text').fadeIn(100);
@@ -80,19 +82,27 @@ $( document ).ready(function() {
 	// eof burger menu
 
 
+
+
   // slider
 
-  $('.bxslider').bxSlider({
-    // mode: 'vertical',
-    auto: true,
-    speed: 500, // 1500
-    controls: false,
-    pause: 1000, // 4000
-    pager: false,
-    autoControls: false
-  });
+    //
+    if($('body').is('.js-bx')){
+      // var j = jQuery.noConflict();
+      // j(document).ready(function () {
+         $('.bxslider').bxSlider({
+           // mode: 'vertical',
+           auto: true,
+           speed: 500, // 1500
+           controls: false,
+           pause: 1000, // 4000
+           pager: false,
+           autoControls: false
+         });
 
+      // });
+    }
 
-  // eof slider
+ // eof slider
 
 });

@@ -7,9 +7,10 @@ append config
   - var jQuery = true
   - var fontAwesome = true
   - var bxSlider = true
+  //- - var googleMaps = true
 
   //- - var mainJsSrc = 'js/main.min.js'
-  - var updateBodyClass = bodyClasses.push('page-home')
+  - var updateBodyClass = bodyClasses.push('page-home js-bx')
 
   //- - var GoogleFonts = 'Poiret+One'
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
@@ -29,7 +30,16 @@ block content
 
     //- include _modules/header
 
-    //- .main-mask
+    .main-mask
+    .head-mask
+    .head-backgrounds
+      .head-backgrounds__wrapper
+        .head-backgrounds__column
+        .head-backgrounds__column
+        .head-backgrounds__column
+        .head-backgrounds__column
+        .head-backgrounds__column
+        .head-backgrounds__column
     main.main
       include _modules/page-home/main
 
