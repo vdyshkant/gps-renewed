@@ -2,13 +2,14 @@ extends conf/docwrapper
 
 
 append config
-  - var PageTitle = 'График работы отделений'
+  - var PageTitle = 'Главная страница'
   //- - var MetaDesc = 'Now we override default configed MetaDesc'
   - var jQuery = true
   - var fontAwesome = true
+  - var bxSlider = true
 
   //- - var mainJsSrc = 'js/main.min.js'
-  - var updateBodyClass = bodyClasses.push('page-schedule')
+  - var updateBodyClass = bodyClasses.push('page-home')
 
   //- - var GoogleFonts = 'Poiret+One'
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
@@ -28,11 +29,11 @@ block content
 
     //- include _modules/header
 
-    .main-mask
+    //- .main-mask
     main.main
-      include _modules/page-schedule/main
+      include _modules/page-home/main
 
-    include _modules/page-schedule/menu
+    include _modules/page-home/menu
 
     include _modules/user-block
 

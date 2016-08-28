@@ -1,0 +1,163 @@
+/* === Page 'services-prives' === */
+
+
+// .page-home {
+//   background: url("../img/main_bg4.jpg") center no-repeat;
+// }
+
+
+.slider {
+  display: none;
+}
+
+.page-home {
+  & .slider {
+    display: block;
+    width: 125px;
+
+
+    outline: 2px dashed crimson;
+    outline-offset: -2px;
+
+    background: hsla(0, 62%, 51%, 0.62);
+    position: absolute;
+    top: 150px;
+    right: 220px;
+  }
+}
+
+.slider {
+	// height: 178px;
+	color: dodgerblue;
+	font-weight: bold;
+	&--item {
+		.num {
+			font-size: 108px;
+			line-height: 108px;
+			display: block;
+			height: 110px;
+      @media #{$tablet} {
+        font-size: 90px;
+      }
+		}
+		.decription {
+		    margin-left: 11%;
+		    display: block;
+		}
+	}
+}
+
+.bxslider {
+	margin: 0;
+}
+
+//
+
+
+.page-home {
+  @media #{$desktop} {
+    background: url("../img/main_bgL.jpg") center no-repeat;
+  }
+
+  @media #{$tablet} {
+    background: url("../img/main_bgM.jpg") center no-repeat;
+  }
+
+  @media #{$mobile} {
+    background: url("../img/main_bgS.jpg") center no-repeat;
+  }
+
+
+
+
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+
+.page-home {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+.page-home {
+  & .main {
+    background: hsla(55, 89%, 78%, 0.53);
+  }
+}
+
+.page-home {
+  & .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+
+    & .logo__essence .fa {
+      font-size: 80px;
+    }
+
+    & a.logo {
+      width: 170px;
+    }
+
+    & .menu__sidebar {
+      margin-left: 2%;
+    }
+  }
+}
+
+.page-home {
+  & .menu .logo__text,
+  & .menu .menu__sidebar__item__link__text,
+  & .menu .menu__address,
+  & .menu .menu__phone,
+  & .menu .menu__btn__link,
+  & .menu .logo__text {
+    display: block;
+  }
+}
+
+.page-home {
+  & .content {
+
+  }
+}
+
+.page-home {
+  & .content {
+
+  }
+}
+
+.page-home {
+  & .content {
+
+  }
+}
+
+.page-home {
+  & .content {
+
+  }
+}
+
+.page-home {
+  & .content {
+
+  }
+}
+
+
+
+.page-home {
+  & .content {
+
+  }
+}
