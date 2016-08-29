@@ -105,4 +105,13 @@ $( document ).ready(function() {
 
  // eof slider
 
+
+
+  (function($) {
+
+    new WOW().init();
+
+  })(jQuery);
+
+
 });

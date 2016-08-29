@@ -7,31 +7,31 @@
         //- Почему работать с нами выгодно module
         .content
           .inner
-            h1.title.title__advantages Почему работать с нами выгодно
+            h1.title.title__advantages.wow.fadeInLeft(data-wow-offset="150" data-wow-delay="900ms") Почему работать с нами выгодно
             .content__advantages__table
               .content__advantages__row
-                .content__advantages__cell
+                .content__advantages__cell.wow.fadeInUp(data-wow-offset="150" data-wow-delay="250ms")
                   .content__advantages__num
                     .num__essence 1
                     .num__title Прозрачные цены
                   p.content__advantages__essense Гибкая система скидок при обеспечивании высококачественного уровня курьерских улсуг
-                .content__advantages__cell
+                .content__advantages__cell.wow.fadeInUp(data-wow-offset="150" data-wow-delay="450ms")
                   .content__advantages__num
                     .num__essence 2
                     .num__title Бесплатный вызов&nbsp;курьера
                   p.content__advantages__essense Всегда бережное отношение к документам и грузам
-                .content__advantages__cell
+                .content__advantages__cell.wow.fadeInUp(data-wow-offset="150" data-wow-delay="650ms")
                   .content__advantages__num
                     .num__essence 3
                     .num__title Собственный автопарк
                   p.content__advantages__essense Транспортировка отправлений осуществляется всеми видами транспорта
-                .content__advantages__cell
+                .content__advantages__cell.wow.fadeInUp(data-wow-offset="150" data-wow-delay="850ms")
                   .content__advantages__num
                     .num__essence 4
                     .num__title Доставка "из&nbsp;рук&nbsp;в&nbsp;руки"
                   p.content__advantages__essense Доставка под роспись получателя лично в руки без доплаты
 
-            a.btn.btn-form.btn--advantages(type="submit") Смотреть все услуги
+            a.btn.btn-form.btn--advantages.wow.fadeIn(data-wow-offset="150" data-wow-delay="1000ms" href="page-services-prices.html") Смотреть все услуги
         //- eof Почему работать с нами выгодно module
 
 
@@ -46,73 +46,75 @@
         //- Новости module
         .content
           .inner
-            h1.title Новости
+            h1.title.wow.fadeInUp(data-wow-offset="150" data-wow-delay="200ms") Новости
             .content-news
-              .news-item
+              .news-item.wow.fadeInUp(data-wow-offset="150" data-wow-delay="200ms")
                 .news-item__thumbnail
                   img(src='img/trump2.jpg' )
                 .news-item__short-desc
                   .short-desc__title Срочность и оперативность доставки
                   .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
-                  a.short-desc__link(href="") Читать дальше
-              .news-item
+                  a.short-desc__link(href="page-single-news.html") Читать дальше
+              .news-item.wow.fadeInUp(data-wow-offset="150" data-wow-delay="400ms")
                 .news-item__thumbnail
                   img(src='img/trump2.jpg' )
                 .news-item__short-desc
                   .short-desc__title Срочность и оперативность доставки
                   .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
-                  a.short-desc__link(href="") Читать дальше
-              .news-item
+                  a.short-desc__link(href="page-single-news.html") Читать дальше
+              .news-item.wow.fadeInUp(data-wow-offset="150" data-wow-delay="600ms")
                 .news-item__thumbnail
                   img(src='img/trump2.jpg' )
                 .news-item__short-desc
                   .short-desc__title Срочность и оперативность доставки
                   .short-desc__text Возможность сверхсрочной доставки в города Республики Казахстан &ndash; на следующий рабочий день.
-                  a.short-desc__link(href="") Читать дальше
-              a.btn.btn-form.btn--all-news(type="submit") Смотреть все новости
+                  a.short-desc__link(href="page-single-news.html") Читать дальше
+              a.btn.btn-form.btn--all-news.wow.fadeIn(data-wow-offset="150" data-wow-delay="1000ms" href="page-news.html") Смотреть все новости
         //- eof Новости module
 
 
         //- Карта module
         .content
           .inner
-            h1.title Контакты
+            h1.title.wow.fadeInUp(data-wow-offset="150" data-wow-delay="200ms") Контакты
             .map-container.scrolloff
-              //- section(
-              //-   id="map-contacts"
-              //-   class="map"
-              //- )
-              //- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQD7v4UaLbWW9Y8R-7BbmmNvzySVkorw&callback=initMap")
-              //- script.
-              //-   (function () {
-              //-         var myLatLng = {lat: 43.2274646, lng: 76.926871};
-              //-         var map = new google.maps.Map(document.getElementById('map-contacts'),  // map id
-              //-          {
-              //-           zoom: 15,
-              //-           center: {lat: 43.2274646, lng: 76.926871},                    // <<< coordinates
-              //-           scrollwheel: false,
-              //-           mapTypeControl: false,
-              //-           panControl: false,
-              //-           disableDefaultUI: false,
-              //-           mapTypeControlOptions: {
-              //-              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-              //-              position: google.maps.ControlPosition.RIGHT_BOTTOM
-              //-           },
-              //-           zoomControl: true,
-              //-           zoomControlOptions: {
-              //-              position: google.maps.ControlPosition.LEFT_CENTER
-              //-           },
-              //-           scaleControl: true,
-              //-           streetViewControl: false
-              //-         });
-              //-
-              //-         var image = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';                                        // marker pic here
-              //-         var beachMarker = new google.maps.Marker({
-              //-               position:{ lat: 43.2274607, lng: 76.9290597},               // <<< coordinates
-              //-               map: map,
-              //-               icon: image
-              //-               });
-              //-   })();
+              section.wow.fadeInUp(
+                id="map-contacts"
+                class="map"
+                data-wow-offset="150"
+                data-wow-delay="150ms"
+              )
+              script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQD7v4UaLbWW9Y8R-7BbmmNvzySVkorw&callback=initMap")
+              script.
+                (function () {
+                      var myLatLng = {lat: 43.2274646, lng: 76.926871};
+                      var map = new google.maps.Map(document.getElementById('map-contacts'),  // map id
+                       {
+                        zoom: 15,
+                        center: {lat: 43.2274646, lng: 76.926871},                    // <<< coordinates
+                        scrollwheel: false,
+                        mapTypeControl: false,
+                        panControl: false,
+                        disableDefaultUI: false,
+                        mapTypeControlOptions: {
+                           style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                           position: google.maps.ControlPosition.RIGHT_BOTTOM
+                        },
+                        zoomControl: true,
+                        zoomControlOptions: {
+                           position: google.maps.ControlPosition.LEFT_CENTER
+                        },
+                        scaleControl: true,
+                        streetViewControl: false
+                      });
+
+                      var image = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';                                        // marker pic here
+                      var beachMarker = new google.maps.Marker({
+                            position:{ lat: 43.2274607, lng: 76.9290597},               // <<< coordinates
+                            map: map,
+                            icon: image
+                            });
+                })();
 
               //- iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.795114631156!2d76.94670731548558!3d43.27666797913605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb7e3c8aeee154541!2sTOO+%22Garant+Post+Service%22!5e0!3m2!1sru!2s!4v1465978858268" height="450" frameborder="0" style="border:0" allowfullscreen).map-l
 

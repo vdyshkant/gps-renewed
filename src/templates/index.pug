@@ -7,6 +7,8 @@ append config
   - var jQuery = true
   - var fontAwesome = true
   - var bxSlider = true
+  - var animateCss = true
+  - var wowJs = true
   //- - var googleMaps = true
 
   //- - var mainJsSrc = 'js/main.min.js'
@@ -31,16 +33,33 @@ block content
     //- include _modules/header
 
     .main-mask
+      h1.headline Современный сервис курьерских услуг
     .head-mask
     .head-backgrounds
       .head-backgrounds__wrapper
-        .head-backgrounds__column
-        .head-backgrounds__column
-        .head-backgrounds__column
-        .head-backgrounds__column
-        .head-backgrounds__column
-        .head-backgrounds__column
-    main.main
+        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="0ms")
+        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="60ms")
+        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="120ms")
+        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="180ms")
+        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="240ms")
+        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="320ms")
+
+    .tool-container
+      .tool__items
+        .tool__items__wrapper
+          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="50ms")
+            i.fa.fa-cube(aria-hidden="true")
+            p Вызов курьера
+          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="150ms")
+            i.fa.fa-cube(aria-hidden="true")
+            p Отслеживание
+          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="250ms")
+            i.fa.fa-cube(aria-hidden="true")
+            p Тарифы и сроки
+          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="350ms")
+            i.fa.fa-cube(aria-hidden="true")
+            p Тарифный калькулятор
+    main.main.wow.fadeIn(data-wow-offset="1")
       include _modules/page-home/main
 
     include _modules/page-home/menu
