@@ -4,6 +4,7 @@
 
 .page-cost {
   background: url("../img/main_bg4.jpg") center no-repeat;
+  background: #fff;
   @media #{$mobile-tablet} {
     background: none;
   }

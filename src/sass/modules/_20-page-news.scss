@@ -80,6 +80,10 @@
         clear: right;
         margin-right: 0;
       }
+      @media #{$tablet} {
+        clear: right;
+        margin-right: 0;
+      }
     }
     @media #{$mobile} {
       width: 45%;

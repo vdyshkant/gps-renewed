@@ -93,9 +93,9 @@ $( document ).ready(function() {
          $('.bxslider').bxSlider({
            // mode: 'vertical',
            auto: true,
-           speed: 500, // 1500
+           speed: 1500, // 1500
            controls: false,
-           pause: 1000, // 4000
+           pause: 4000, // 4000
            pager: false,
            autoControls: false
          });
