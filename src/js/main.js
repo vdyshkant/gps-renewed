@@ -108,9 +108,9 @@ $( document ).ready(function() {
 
 
   (function($) {
-
-    new WOW().init();
-
+    if($('body').is('.page-home')){
+      new WOW().init();
+    }
   })(jQuery);
 
 

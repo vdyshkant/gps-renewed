@@ -1,0 +1,62 @@
+extends conf/docwrapper
+
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+
+
+append config
+  - var PageTitle = '404 - страница не найдена'
+  //- - var MetaDesc = 'Now we override default configed MetaDesc'
+  - var jQuery = true
+  - var fontAwesome = true
+
+  //- - var mainJsSrc = 'js/main.min.js'
+  - var updateBodyClass = bodyClasses.push('page-not-found js-menu')
+
+  //- - var GoogleFonts = 'Poiret+One'
+  //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
+  //- ...
+
+append stylesheets
+  //- link( href='css/extrastyles.css', rel='stylesheet' )
+
+
+  //- eof HEAD appends
+  //- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+block content
+  .wrapper
+
+    //- include _modules/header
+
+    .main-mask
+    main.main
+      .wrap
+        .inner
+          //- .breadcrumb
+          //-   a.breadcrumb__link(href="/") На главную
+          +breadcrumbs([
+             { 'anchor':'На главную','link':'/index.html' },
+           ])(class='')      //- <== u can add additional class here.
+          .content
+            .inner
+              h1.title 404 - Страница не найдена
+              .content-text
+                p
+                  | Данная страница временно недоступна.
+
+    include _modules/page-schedule/menu
+
+    include _modules/user-block
+
+    include _modules/footer
+
+include _modules/modal-content
