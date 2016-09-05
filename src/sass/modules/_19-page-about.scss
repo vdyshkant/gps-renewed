@@ -45,7 +45,7 @@
 }
 
 .page-about {
-  & p.content-text {
+  & .content-text p {
     max-width: 450px;
     @media #{$mobile} {
       max-width: none;
