@@ -106,40 +106,90 @@ $( document ).ready(function() {
     // slider about honors
     if($('body').is('.page-about')){
 
-      $('#bx-about-honors').bxSlider({
-       auto: true,
-       speed: 1200, // 1500
-       controls: false,
-       pause: 1000, // 4000
-      //  pager: false,
-      //  autoControls: false,
+      if ($(window).width() > 768) {
+        $('#bx-about-honors').bxSlider({
+         auto: true,
+         speed: 1200, // 1500
+         controls: false,
+         pause: 1000, // 4000
+        //  pager: false,
+        //  autoControls: false,
 
-        minSlides: 5,
-        maxSlides: 5,
-        moveSlides: 1,
-        slideWidth: 136,
-        slideMargin: 30
-      });
+          minSlides: 5,
+          maxSlides: 5,
+          moveSlides: 1,
+          slideWidth: 136,
+          slideMargin: 30
+        });
+      }
+
+      if ($(window).width() <= 768) {
+        $('#bx-about-honors').bxSlider({
+         auto: true,
+         speed: 1200, // 1500
+         controls: false,
+         pause: 1000, // 4000
+        //  pager: false,
+        //  autoControls: false,
+
+          minSlides: 2,
+          maxSlides: 2,
+          moveSlides: 1,
+          slideWidth: 130,
+          slideMargin: 20
+        });
+      }
+
+
 
       // slider about partners
-      $('#bx-about-partners').bxSlider({
-      //  auto: true,
-       speed: 1200, // 1500
-       controls: false,
-       pause: 1000, // 4000
-      //  pager: false,
-      //  autoControls: false,
+      if ($(window).width() <= 768) {
+        $('#bx-about-partners').bxSlider({
+        //  auto: true,
+         speed: 1200, // 1500
+         controls: false,
+         pause: 1000, // 4000
+        //  pager: false,
+        //  autoControls: false,
 
-        minSlides: 4,
-        maxSlides: 4,
-        moveSlides: 1,
-        slideWidth: 192,
-        slideMargin: 10
-      });
+          minSlides: 2,
+          maxSlides: 2,
+          moveSlides: 1,
+          slideWidth: 130,
+          slideMargin: 20
+        });
+      }
 
+      if ($(window).width() > 768) {
+        $('#bx-about-partners').bxSlider({
+        //  auto: true,
+         speed: 1200, // 1500
+         controls: false,
+         pause: 1000, // 4000
+        //  pager: false,
+        //  autoControls: false,
+
+          minSlides: 4,
+          maxSlides: 4,
+          moveSlides: 1,
+          slideWidth: 192,
+          slideMargin: 10
+        });
+      }
     }
 
 $("a#fancylink").fancybox({
+  // beforeShow: function() {
+  //   var newWidth = 250; // set new image display width
+  //   $("#fancylink img").css({
+  //       width  : newWidth,
+  //       height : "auto"
+  //   }); // apply new size to img
+  //   // optionally :
+  //   // set new values for parent container IF you want to match the image size
+  //   // this.width  = newWidth;
+  //   // this.height = $(".fancybox-inner img").innerHeight();
+  // },
   'hideOnContentClick': true,
   'transitionIn'	:	'elastic',
   'transitionOut'	:	'elastic',
@@ -151,12 +201,27 @@ $("a#fancylink").fancybox({
           'locked' : false // try changing to true and scrolling around the page
       }
   },
-  'overlayShow'	:	false
+  'overlayShow'	:	false,
+  'maxWidth' : 250
 });
 
 $("a#fancylink2").fancybox({
-  'hideOnContentClick': true
+  'hideOnContentClick': true,
+  'transitionIn'	:	'elastic',
+  'transitionOut'	:	'elastic',
+  'fitToView'	:	false,
+  'speedIn'		:	600,
+  'speedOut'		:	200,
+  'helpers' : {
+      'overlay' : {
+          'locked' : false // try changing to true and scrolling around the page
+      }
+  },
+  'overlayShow'	:	false,
+  'maxWidth' : 150
 });
+
+
 
 // этим мы отключим перепрыгивание наверх экрана по клике на ссылку
 // function fancyNice(e) {
