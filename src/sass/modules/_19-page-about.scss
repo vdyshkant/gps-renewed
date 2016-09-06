@@ -147,6 +147,14 @@
 }
 
 .page-about {
+  & .content__partners {
+    & img {
+      margin: 0 auto;
+    }
+  }
+}
+
+.page-about {
   & .content__partners__row {
     @include clearfix;
   }

@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="bxslider/jquery.bxslider.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -53,44 +55,43 @@
                 </section>
                 <section class="content__honors">
                   <h3 class="content__honors__title blue-title">Наши награды</h3>
-                  <div class="content__honors__table">
-                    <div class="content__honors__row">
-                      <div class="content__honors__cell">
-                        <figure><img src="img/award.png"></figure>
-                      </div>
-                      <div class="content__honors__cell">
-                        <figure><img src="img/award.png"></figure>
-                      </div>
-                      <div class="content__honors__cell">
-                        <figure><img src="img/award.png"></figure>
-                      </div>
-                      <div class="content__honors__cell">
-                        <figure><img src="img/award.png"></figure>
-                      </div>
-                      <div class="content__honors__cell">
-                        <figure><img src="img/award.png"></figure>
-                      </div>
-                    </div>
-                  </div>
+                  <ul class="content__honors__table" id="bx-about-honors">
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                    <li class="content__honors__cell"><a id="fancylink" href="img/award.png" onclick="event.stopPropagation();">
+                        <figure><img src="img/award.png"></figure></a></li>
+                  </ul>
                 </section>
                 <section class="content__partners">
                   <h3 class="content__partners__title blue-title">Наши партнеры</h3>
-                  <div class="content__partners__table">
-                    <div class="content__partners__row">
-                      <div class="content__partners__cell">
-                        <figure><img src="img/fedex.png"></figure>
-                      </div>
-                      <div class="content__partners__cell">
-                        <figure><img src="img/fedex.png"></figure>
-                      </div>
-                      <div class="content__partners__cell">
-                        <figure><img src="img/fedex.png"></figure>
-                      </div>
-                      <div class="content__partners__cell">
-                        <figure><img src="img/fedex.png"></figure>
-                      </div>
-                    </div>
-                  </div>
+                  <ul class="content__partners__table" id="bx-about-partners">
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                    <li class="content__partners__cell"><a id="fancylink" href="img/fedex.png">
+                        <figure><img src="img/fedex.png"></figure></a></li>
+                  </ul>
                 </section>
               </div>
             </div>
@@ -208,13 +209,16 @@
         </div>
       </div>
       <div class="slider">
-        <ul class="bxslider">
+        <ul id="home-slider">
           <li class="small-12 columns slider--item"><span class="num">12</span><span class="decription">лет на рынке<br> Казахстана</span></li>
           <li class="small-12 columns slider--item"><span class="num">32</span><span class="decription">отделения в стране</span></li>
         </ul>
       </div>
     </div>
     <script src="js/jquery3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="bxslider/jquery.bxslider-rahisified.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

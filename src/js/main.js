@@ -90,7 +90,7 @@ $( document ).ready(function() {
     if($('body').is('.js-bx')){
       // var j = jQuery.noConflict();
       // j(document).ready(function () {
-         $('.bxslider').bxSlider({
+         $('#home-slider').bxSlider({
            // mode: 'vertical',
            auto: true,
            speed: 1500, // 1500
@@ -102,6 +102,67 @@ $( document ).ready(function() {
 
       // });
     }
+
+    // slider about honors
+    if($('body').is('.page-about')){
+
+      $('#bx-about-honors').bxSlider({
+       auto: true,
+       speed: 1200, // 1500
+       controls: false,
+       pause: 1000, // 4000
+      //  pager: false,
+      //  autoControls: false,
+
+        minSlides: 5,
+        maxSlides: 5,
+        moveSlides: 1,
+        slideWidth: 136,
+        slideMargin: 30
+      });
+
+      // slider about partners
+      $('#bx-about-partners').bxSlider({
+      //  auto: true,
+       speed: 1200, // 1500
+       controls: false,
+       pause: 1000, // 4000
+      //  pager: false,
+      //  autoControls: false,
+
+        minSlides: 4,
+        maxSlides: 4,
+        moveSlides: 1,
+        slideWidth: 192,
+        slideMargin: 10
+      });
+
+    }
+
+$("a#fancylink").fancybox({
+  'hideOnContentClick': true,
+  'transitionIn'	:	'elastic',
+  'transitionOut'	:	'elastic',
+  'fitToView'	:	false,
+  'speedIn'		:	600,
+  'speedOut'		:	200,
+  'helpers' : {
+      'overlay' : {
+          'locked' : false // try changing to true and scrolling around the page
+      }
+  },
+  'overlayShow'	:	false
+});
+
+$("a#fancylink2").fancybox({
+  'hideOnContentClick': true
+});
+
+// этим мы отключим перепрыгивание наверх экрана по клике на ссылку
+// function fancyNice(e) {
+//    e.preventDefault();
+// }
+
 
  // eof slider
 
