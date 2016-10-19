@@ -1,3 +1,12 @@
+mixin svg(arr)
+  each item in arr
+    - var svgclass = { class: item.class }
+    - var identificator = item.pathid
+    - var filename = item.filename
+    svg()&attributes(svgclass)
+      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/" + filename + ".svg#" + identificator)
+
+
 mixin breadcrumbs(arr)
   ul.breadcrumbs(class!=attributes.class)
     each item in arr
