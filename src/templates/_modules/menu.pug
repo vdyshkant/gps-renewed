@@ -1,3 +1,12 @@
+mixin svg(arr)
+  each item in arr
+    - var svgclass = { class: item.class }
+    - var identificator = item.pathid
+    - var filename = item.filename
+    svg()&attributes(svgclass)
+      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/" + filename + ".svg#" + identificator)
+
+
 .menu-mask
 .menu#menu
   .wrap
@@ -12,18 +21,22 @@
             //- svg.icon-signs
             //-   use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/signs.svg#svg-signs")
             i.menu__icon.menu__icon-concept
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'menu-icon__dollar'}])
             span.menu__sidebar__item__link__text Стоимость доставки
         .menu__sidebar__item
           a.menu__sidebar__item__link(href="page-terms.html")
             i.menu__icon.menu__icon-placement
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'menu-icon__calendar'}])
             span.menu__sidebar__item__link__text Сроки доставки
         .menu__sidebar__item
           a.menu__sidebar__item__link.selected(href="page-nearest.html")
             i.menu__icon.menu__icon-infrastructure
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'menu-icon__map-marker'}])
             span.menu__sidebar__item__link__text Ближайшее отделение
         .menu__sidebar__item
           a.menu__sidebar__item__link(href="page-schedule.html")
             i.menu__icon.menu__icon-news
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'menu-icon__stopwatch'}])
             span.menu__sidebar__item__link__text График работы отделений
       .menu__address
         p Республика Казахстан

@@ -66,6 +66,12 @@ html( lang="en" )
       script( src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' )
       //-script( src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js' )
       script new WOW().init();
+        // код, который ниже, его нужно вставить вместо того, что на 1 строку выше, чтоб он не пытался вызываться на каждой странице, где включена переменная. Рефакторинг и реанализ надо сделать.
+        // (function($) {
+        //   if($('body').is('.page-home')){
+        //     new WOW().init();
+        //   }
+        // })(jQuery);
 
     if googleMaps
       //- script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWdlNyjf2AqOuqPZHE8AuA7v9UsQUj7pk")

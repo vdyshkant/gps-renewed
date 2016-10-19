@@ -233,11 +233,11 @@ $("a#fancylink2").fancybox({
 
 
 
-  (function($) {
-    if($('body').is('.page-home')){
-      new WOW().init();
-    }
-  })(jQuery);
+  // (function($) {
+  //   if($('body').is('.page-home')){
+  //     new WOW().init();
+  //   }
+  // })(jQuery);
 
 
 });

@@ -146,33 +146,39 @@
   &:hover {
     margin-left: 10px;
     color: #3E8AE2;
-    & .menu__icon-concept {
-      background-position: -20px -20px;
+    & .menu__icon .icon {
+      fill: #818B21;
     }
-    & .menu__icon-placement {
-      background-position: -20px 0px;
-    }
-    & .menu__icon-infrastructure {
-      background-position: -20px -60px;
-    }
-    & .menu__icon-news {
-      background-position: -20px -80px;
-    }
+    // & .menu__icon-concept {
+    //   background-position: -20px -20px;
+    // }
+    // & .menu__icon-placement {
+    //   background-position: -20px 0px;
+    // }
+    // & .menu__icon-infrastructure {
+    //   background-position: -20px -60px;
+    // }
+    // & .menu__icon-news {
+    //   background-position: -20px -80px;
+    // }
   }
   &.selected {
     color: #3E8AE2;
-    & .menu__icon-concept {
-      background-position: -20px -20px;
+    & .menu__icon .icon {
+      fill: #818B21;
     }
-    & .menu__icon-placement {
-      background-position: -20px 0px;
-    }
-    & .menu__icon-infrastructure {
-      background-position: -20px -60px;
-    }
-    & .menu__icon-news {
-      background-position: -20px -80px;
-    }
+    // & .menu__icon-concept {
+    //   background-position: -20px -20px;
+    // }
+    // & .menu__icon-placement {
+    //   background-position: -20px 0px;
+    // }
+    // & .menu__icon-infrastructure {
+    //   background-position: -20px -60px;
+    // }
+    // & .menu__icon-news {
+    //   background-position: -20px -80px;
+    // }
   }
 }
 
@@ -267,34 +273,19 @@
 .menu  .menu__icon {
   width: 20px;
   height: 20px;
-  background-image: url("http://iqbc.ua/images/nav.png");
   position: absolute;
   left: 20px;
   top: 50%;
   margin: -10px 0;
   // thin menu:
   left: 13px;
-}
-.menu  .menu__icon-concept {
-  background-position: 0 -20px;
-
-}
-.menu  .menu__icon-placement {
-  background-position: 0 0px;
-  &:hover {
-    background-position: -20px 0px;
-  }
-}
-.menu  .menu__icon-infrastructure {
-  background-position: 0 -60px;
-  &:hover {
-    background-position: -20px -60px;
-  }
-}
-.menu  .menu__icon-news {
-  background-position: 0 -80px;
-  &:hover {
-    background-position: -20px -80px;
+  & .icon {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    fill: #5C5C5D;
+    transition: .3s ease-out;
   }
 }
 
