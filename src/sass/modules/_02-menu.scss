@@ -93,6 +93,7 @@
   }
   & .logo__text {
     // thin panel:
+    color: #fff;
     display: none;
     font-size: 12px;
     white-space: nowrap;
@@ -102,6 +103,7 @@
   margin: 0 auto;
   margin-bottom: 15px;
   transition: .3s ease-out;
+  color: #fff;
   & .fa {
     // font-size: 80px;
 
