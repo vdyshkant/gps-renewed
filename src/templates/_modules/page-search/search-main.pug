@@ -1,0 +1,32 @@
+mixin breadcrumbs(arr)
+  ul.breadcrumbs(class!=attributes.class)
+    each item in arr
+      li
+        a(
+          href=item.link,
+          class=item.class
+          ) #{item.anchor}
+
+.wrap
+  .inner
+    +breadcrumbs([
+      { 'anchor':'На главную','link':'/index.html' },
+    ])(class='')      //- <== u can add additional class here.
+    .content
+      .inner
+        h1.title Контакты
+        p.sub-title Если у Вас есть вопросы, жалобы, предложения, сообщите нам
+        form.form-content.form-nearest
+          label
+            span ФИО
+            input
+          label
+            span Телефон
+            input
+          label
+            span E-mail
+            input
+          label
+            span Сообщение
+            textarea
+          button.btn.btn--contacts(type="submit") Отправить
