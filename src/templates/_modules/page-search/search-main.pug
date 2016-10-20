@@ -14,10 +14,19 @@ mixin breadcrumbs(arr)
     ])(class='')      //- <== u can add additional class here.
     .content
       .inner
-        h1.title Результаты поиска:
+
+        form.sisea-search-form(action='search-results.html', method='get')
+          fieldset
+            label(for='search') Поиск
+            input#search(type='text', name='search', value='express' placeholder="Найти товар, услугу...")
+            input(type='hidden', name='id', value='67')
+            input#submit(type='submit', value='Поиск')
+
+
+        h2.title Результаты поиска:
         p.sub-title
           span 3 результатов найдено для "express" <br>
-          span Страницы с результатами поиска:1
+          span Страницы с результатами поиска: <span class="curr-page">1</span>
 
         .results_item
           p.results_item__number 1.&nbsp;
@@ -35,4 +44,4 @@ mixin breadcrumbs(arr)
           p.results_item__content Экспресс-доставка по Республике Казахстан документов и грузов по принципу "из рук в руки", "от двери до двери" до конца рабочего дня вес до 300 кг.; максимальный вес одного места - 30 кг.; доставка по
 
         p.sub-title
-          span Страницы с результатами поиска:1
+          span Страницы с результатами поиска: <span class="curr-page">1</span>

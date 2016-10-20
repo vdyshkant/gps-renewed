@@ -50,131 +50,6 @@
   }
 }
 
-.page-search {
-  & .content__advantages {
-    margin-bottom: 60px;
-  }
-}
-
-.page-search {
-  & .content__advantages__row {
-    @include clearfix;
-  }
-}
-
-.page-search {
-  & .content__advantages__cell {
-    float: left;
-    width: 23%;
-    margin-right: 2%;
-    @media #{$mobile} {
-      width: 47%;
-      margin-right: 6%;
-      margin-bottom: 25px;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    &:nth-child(2n){
-      @media #{$mobile} {
-        margin: 0;
-      }
-    }
-    &:nth-child(3n){
-      @media #{$mobile} {
-        clear: left;
-      }
-    }
-  }
-}
-
-.page-search {
-  & .content__advantages__num {
-    font-weight: bold;
-    padding-bottom: 5px;
-    font-size: 12pt;
-    display: inline-block;
-    width: 20px;
-
-    color: #034287;
-    border-bottom: 2px solid #034287;
-    margin-bottom: 30px;
-  }
-}
-
-.page-search {
-  & .content__advantages__essense {
-    color: #5b5b5b;
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-.page-search {
-  & .content__honors__table {
-    margin-bottom: 60px;
-  }
-}
-
-.page-search {
-  & .content__honors__row {
-    @include clearfix;
-  }
-}
-
-.page-search {
-  & .content__honors__cell {
-    float: left;
-    width: 16%;
-    margin-right: 4%;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.page-search {
-  & .content__partners__table {
-    margin-bottom: 60px;
-    @media #{$mobile} {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-.page-search {
-  & .content__partners__row {
-    @include clearfix;
-  }
-}
-
-.page-search {
-  & .content__partners__cell {
-    text-align: center;
-    float: left;
-    width: 23%;
-    margin-right: 2.5%;
-    @media #{$mobile} {
-      width: 47%;
-      margin-right: 6%;
-      margin-bottom: 30px;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    &:nth-child(2n){
-      @media #{$mobile} {
-        margin: 0;
-        float: right;
-      }
-    }
-    &:nth-child(3n){
-      @media #{$mobile} {
-        clear: left;
-      }
-    }
-  }
-}
 
 .page-search {
   & .user-block__menu .fa {
@@ -241,6 +116,109 @@
     text-overflow: ellipsis;
   }
 }
+
+
+.page-search {
+  & .sisea-search-form {
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+    @include clearfix;
+    width: 470px;
+  }
+}
+
+
+.page-search {
+  .sisea-search-form #search {
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+	-moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+	box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  color: #999;
+	float: left;
+	font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+	height: 50px;
+	padding: 10px;
+	width: 320px;
+  transition: .3s ease-out;
+
+    &:focus {
+  	border-color: #aaa;
+  	-webkit-box-shadow: 0 1px 1px #bbb inset;
+  	-moz-box-shadow: 0 1px 1px #bbb inset;
+  	box-shadow: 0 1px 1px #bbb inset;
+  	outline: 0;
+    }
+
+    &:-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-webkit-input-placeholder {
+    	color: #999;
+    	font-weight: normal;
+    }
+  }
+}
+
+.page-search {
+  .sisea-search-form input[type='hidden'] {
+    display: none;
+  }
+}
+
+
+.page-search {
+  .sisea-search-form #submit {
+
+    background-color: #3E8AE2;
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 90px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1e70cc;
+    }
+  }
+}
+
+
+.page-search {
+  & .sisea-search-form label[for='search'] {
+    color: #5b5b5b;
+    background-color: #fff;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 0 10px;
+
+    position: absolute;
+    top: -10px;
+    left: 10px;
+  }
+}
+
+
+.page-search {
+  & fieldset {
+    margin: 0;
+    padding: 25px 20px;
+  }
+}
+
 
 .page-search {
   & .content {
