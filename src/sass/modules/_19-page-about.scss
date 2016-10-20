@@ -2,13 +2,13 @@
 
 
 
-// .page-about {
-//   background: url("../img/main_bg4.jpg") center no-repeat;
-// }
+.page-about {
+  background: url("../img/main_bg4.jpg") center no-repeat;
+}
 
 
 .page-about {
-  background: #fff;
+  // background: #fff;
   & .form-content {
     margin-bottom: 60px;
     @include clearfix;
@@ -22,6 +22,12 @@
 }
 
 // EOF common styles;
+
+@media #{$desktop} {
+  .page-about .main {
+    padding-right: 30px;
+  }
+}
 
 
 .page-about {
@@ -188,32 +194,32 @@
 //   }
 // }
 
-.page-about {
-  & .user-block__menu .fa {
-    color: rgba(91, 91, 91, 1);
-    &:hover {
-      color: rgba(91, 91, 91, .7);
-    }
-  }
-  & .user-block__menu__item__link {
-    color: rgba(91, 91, 91, 1);
-    &:hover {
-      color: rgba(91, 91, 91, .7);
-    }
-  }
-  & .user-block__menu__item__title {
-    color: rgba(91, 91, 91, 1);
-    &:hover {
-      color: rgba(91, 91, 91, .7);
-    }
-  }
-  & .lang .lang__link {
-    color: rgba(91, 91, 91, 1);
-    &:hover {
-      color: rgba(91, 91, 91, .7);
-    }
-  }
-}
+// .page-about {
+//   & .user-block__menu .fa {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+//   & .user-block__menu__item__link {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+//   & .user-block__menu__item__title {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+//   & .lang .lang__link {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+// }
 
 .page-about {
   & .content {
