@@ -18,6 +18,7 @@
 .page-terms {
   & .form-content {
     margin-bottom: 60px;
+    @include clearfix;
   }
 }
 
