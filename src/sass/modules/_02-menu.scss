@@ -37,7 +37,7 @@
     font-size: 80px;
     margin-left: 10px;
   }
-  & a.logo {
+  & .logo {
     width: 170px;
   }
   & .logo__text {
@@ -67,7 +67,7 @@
   }
 }
 
-.menu a.logo {
+.menu .logo {
   display: block;
 
   margin: 0 auto;
@@ -99,6 +99,18 @@
     white-space: nowrap;
   }
 }
+
+.page-home .menu {
+
+  & .logo {
+    width: 170px;
+  }
+
+  & .logo__essence .fa {
+    margin-left: 10px;
+  }
+}
+
 .menu .logo__essence {
   margin: 0 auto;
   margin-bottom: 15px;
