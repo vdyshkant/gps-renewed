@@ -1,0 +1,249 @@
+/* === Page 'search' === */
+
+
+
+// .page-search {
+//   background: url("../img/main_bg4.jpg") center no-repeat;
+// }
+
+
+.page-search {
+  background: #fff;
+}
+
+.page-search {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-search {
+  & .btn--page-search {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+.page-search {
+  & .content-text p {
+    max-width: 450px;
+    @media #{$mobile} {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+
+.page-search {
+  & .content__advantages {
+    margin-bottom: 60px;
+  }
+}
+
+.page-search {
+  & .content__advantages__row {
+    @include clearfix;
+  }
+}
+
+.page-search {
+  & .content__advantages__cell {
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+    @media #{$mobile} {
+      width: 47%;
+      margin-right: 6%;
+      margin-bottom: 25px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(2n){
+      @media #{$mobile} {
+        margin: 0;
+      }
+    }
+    &:nth-child(3n){
+      @media #{$mobile} {
+        clear: left;
+      }
+    }
+  }
+}
+
+.page-search {
+  & .content__advantages__num {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 12pt;
+    display: inline-block;
+    width: 20px;
+
+    color: #034287;
+    border-bottom: 2px solid #034287;
+    margin-bottom: 30px;
+  }
+}
+
+.page-search {
+  & .content__advantages__essense {
+    color: #5b5b5b;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.page-search {
+  & .content__honors__table {
+    margin-bottom: 60px;
+  }
+}
+
+.page-search {
+  & .content__honors__row {
+    @include clearfix;
+  }
+}
+
+.page-search {
+  & .content__honors__cell {
+    float: left;
+    width: 16%;
+    margin-right: 4%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-search {
+  & .content__partners__table {
+    margin-bottom: 60px;
+    @media #{$mobile} {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.page-search {
+  & .content__partners__row {
+    @include clearfix;
+  }
+}
+
+.page-search {
+  & .content__partners__cell {
+    text-align: center;
+    float: left;
+    width: 23%;
+    margin-right: 2.5%;
+    @media #{$mobile} {
+      width: 47%;
+      margin-right: 6%;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(2n){
+      @media #{$mobile} {
+        margin: 0;
+        float: right;
+      }
+    }
+    &:nth-child(3n){
+      @media #{$mobile} {
+        clear: left;
+      }
+    }
+  }
+}
+
+.page-search {
+  & .user-block__menu .fa {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+  & .user-block__menu__item__link {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+  & .user-block__menu__item__title {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+  & .lang .lang__link {
+    color: rgba(91, 91, 91, 1);
+    &:hover {
+      color: rgba(91, 91, 91, .7);
+    }
+  }
+}
+
+.page-search {
+  & .results_item {
+    margin-bottom: 25px;
+  }
+}
+
+.page-search {
+  & .results_item__number {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+.page-search {
+  & .results_item__title {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 12pt;
+    display: inline-block;
+    text-decoration: none;
+    color: #3E8AE2;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid #3E8AE2;
+    }
+  }
+}
+
+.page-search {
+  & .results_item__content {
+    margin-bottom: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.page-search {
+  & .content {
+
+  }
+}

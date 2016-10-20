@@ -14,19 +14,25 @@ mixin breadcrumbs(arr)
     ])(class='')      //- <== u can add additional class here.
     .content
       .inner
-        h1.title Контакты
-        p.sub-title Если у Вас есть вопросы, жалобы, предложения, сообщите нам
-        form.form-content.form-nearest
-          label
-            span ФИО
-            input
-          label
-            span Телефон
-            input
-          label
-            span E-mail
-            input
-          label
-            span Сообщение
-            textarea
-          button.btn.btn--contacts(type="submit") Отправить
+        h1.title Результаты поиска:
+        p.sub-title
+          span 3 результатов найдено для "express" <br>
+          span Страницы с результатами поиска:1
+
+        .results_item
+          p.results_item__number 1.&nbsp;
+            a.results_item__title(href="javascript:void(0)") EXPRESS 12-00 доставка
+          p.results_item__content Экспресс-доставка по Республике Казахстан документов и грузов по принципу "из рук в руки", "от двери до двери" до конца рабочего дня вес до 300 кг.; максимальный вес одного места - 30 кг.; доставка по
+
+        .results_item
+          p.results_item__number 2.&nbsp;
+            a.results_item__title(href="javascript:void(0)") SUPER EXPRESS доставка
+          p.results_item__content Экспресс-доставка по Республике Казахстан документов и грузов по принципу "из рук в руки", "от двери до двери" до конца рабочего дня вес до 300 кг.; максимальный вес одного места - 30 кг.; доставка по
+
+        .results_item
+          p.results_item__number 3.&nbsp;
+            a.results_item__title(href="javascript:void(0)") EXPRESS-доставка
+          p.results_item__content Экспресс-доставка по Республике Казахстан документов и грузов по принципу "из рук в руки", "от двери до двери" до конца рабочего дня вес до 300 кг.; максимальный вес одного места - 30 кг.; доставка по
+
+        p.sub-title
+          span Страницы с результатами поиска:1
