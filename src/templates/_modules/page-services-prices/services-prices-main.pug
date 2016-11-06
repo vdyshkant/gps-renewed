@@ -7,6 +7,15 @@ mixin breadcrumbs(arr)
           class=item.class
           ) #{item.anchor}
 
+mixin svg(arr)
+  each item in arr
+    - var svgclass = { class: item.class }
+    - var identificator = item.pathid
+    - var filename = item.filename
+    svg()&attributes(svgclass)
+      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/" + filename + ".svg#" + identificator)
+
+
 
 .wrap
   .inner
@@ -22,39 +31,73 @@ mixin breadcrumbs(arr)
           .services-left
             .services-left-wrapper
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_01'}])
                 p
                   | EXPRESS доставка
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_02'}])
                 p
                   | SUPER&nbsp;EXPRESS доставка
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  svg#Layer_1.icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 58.9 63.9', style='enable-background:new 0 0 58.9 63.9;', xml:space='preserve')
+                    path.st0(d='M57,34.5C57,49.7,44.7,62,29.5,62C14.3,62,2,49.7,2,34.5C2,19.3,14.3,7,29.5,7C44.7,7,57,19.3,57,34.5z')
+                    polygon.st1(points='8.3,34.4 3.4,34.4 5.4,34.4 ')
+                    rect.st2(x='27.7', y='1.5', width='3.4', height='3.5')
+                    rect.st3(x='25.7', y='0.6', width='7.6', height='1.8')
+                    path.st4(d='M29.4,33.5c0-0.8,0-23.1,0-23.1c13.3,0,24.1,10.8,24.1,24.1H30.5')
+                    path.st4(d='M30.5,34.4c0.8,0,23.1,0,23.1,0c0,13.3-10.8,24.1-24.1,24.1V35.4')
+
                 p
                   | EXPRESS&nbsp;12&#8209;00 доставка
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_04'}])
                 p
                   | Доставка&nbsp;грузов железнодорожным транспортом
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  svg#Layer_1.icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 32 32', style='enable-background:new 0 0 32 32;', xml:space='preserve')
+                    g.st0
+                      rect.st1(x='-111.3', y='-186.7', width='473.3', height='236')
+                    g.st0
+                      rect.st2(x='3.1', y='3.1', width='26.2', height='26.2')
+                      circle.st1(cx='3.7', cy='3.7', r='3.7')
+                      circle.st1(cx='28.3', cy='3.7', r='3.7')
+                      circle.st1(cx='3.7', cy='28.3', r='3.7')
+                      circle.st1(cx='28.3', cy='28.3', r='3.7')
+                      line.st3(x1='16', y1='25.3', x2='16', y2='6.8')
+                      line.st3(x1='6.8', y1='16', x2='25.3', y2='16')
+                    g.st9
+                      path(d='M32,3.7C32,1.7,30.3,0,28.3,0c-1.7,0-3,1.1-3.5,2.6H7.2C6.8,1.1,5.4,0,3.7,0C1.7,0,0,1.7,0,3.7c0,1.7,1.1,3,2.6,3.5v17.5\
+                      C1.1,25.2,0,26.6,0,28.3C0,30.3,1.7,32,3.7,32c1.5,0,2.8-0.9,3.4-2.2h17.8c0.6,1.3,1.9,2.2,3.4,2.2c2.1,0,3.7-1.7,3.7-3.7\
+                      c0-1.5-0.9-2.8-2.2-3.4V7.1C31.1,6.5,32,5.2,32,3.7z M28.8,24.6c-0.2,0-0.3-0.1-0.5-0.1c-2.1,0-3.7,1.7-3.7,3.7\
+                      c0,0.2,0,0.4,0.1,0.5H7.4c0-0.2,0.1-0.3,0.1-0.5c0-2.1-1.7-3.7-3.7-3.7c0,0-0.1,0-0.1,0V7.4c0,0,0.1,0,0.1,0c2.1,0,3.7-1.7,3.7-3.7\
+                      c0,0,0-0.1,0-0.1h17.2c0,0,0,0.1,0,0.1c0,2.1,1.7,3.7,3.7,3.7c0.2,0,0.4,0,0.5-0.1L28.8,24.6L28.8,24.6z')
+                      polygon(points='17,6.8 15,6.8 15,15 6.8,15 6.8,17 15,17 15,25.3 17,25.3 17,17 25.3,17 25.3,15 17,15 	')
+
                 p
                   | Транспортные и&nbsp;дополнительные услуги
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_06'}])
                 p
                   | Тарифы&nbsp;на&nbsp;доставку корреспонденции по городу
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_07'}])
                 p
                   | Доставка&nbsp;отчетностей по&nbsp;г.Алматы
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_08'}])
                 p
                   | Доставка&nbsp;посылок по&nbsp;городу
               a.services__item
-                i.fa.fa-cube(aria-hidden="true")
+                .i(aria-hidden="true")
+                  +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'services-prices_09'}])
                 p
                   | Дополнительные услуги
           .services-right
