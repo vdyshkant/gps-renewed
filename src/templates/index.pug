@@ -26,6 +26,15 @@ append stylesheets
   //- –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 
+mixin svg(arr)
+  each item in arr
+    - var svgclass = { class: item.class }
+    - var identificator = item.pathid
+    - var filename = item.filename
+    svg()&attributes(svgclass)
+      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/" + filename + ".svg#" + identificator)
+
+
 block content
   .wrapper
 
@@ -48,16 +57,20 @@ block content
       .tool__items
         .tool__items__wrapper
           a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="50ms")
-            i.fa.fa-cube(aria-hidden="true")
-            p Вызов курьера
+            .i(aria-hidden="true")
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_01'}])
+            p Вызов2 курьера
           a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="150ms")
-            i.fa.fa-cube(aria-hidden="true")
+            .i(aria-hidden="true")
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_02'}])
             p Отслеживание
           a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="250ms")
-            i.fa.fa-cube(aria-hidden="true")
+            .i(aria-hidden="true")
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_03'}])
             p Тарифы и сроки
           a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="350ms")
-            i.fa.fa-cube(aria-hidden="true")
+            .i(aria-hidden="true")
+              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_04'}])
             p Тарифный калькулятор
     main.main
       include _modules/page-home/main
