@@ -359,7 +359,7 @@
   & .content__advantages__num {
     font-weight: bold;
     padding-bottom: 5px;
-    font-size: 12pt;
+    font-size: 14px;
     display: inline-block;
     width: 100%;
 
@@ -394,7 +394,7 @@
     left: 36px;
     bottom: 3px;
     // float: right;
-    width: 125px;
+    max-width: 105px;
     line-height: 24px;
   }
 }
