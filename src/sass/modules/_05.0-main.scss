@@ -155,6 +155,11 @@
     border-bottom-style: solid;
     border-bottom-width: 4px;
 
+    @media #{$wide} {
+
+      margin-right: 40px;
+    }
+
     & span {
       text-transform: uppercase;
     }
