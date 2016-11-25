@@ -80,6 +80,10 @@
 .user-block__menu__item__title {
   font-size: 16px;
   color: #fff;
+  text-decoration: none;
+  transition: .6s ease-out;
+
+
   @media #{$desktop} {
     display: block;
     float: right;
@@ -101,6 +105,10 @@
   }
   @media #{$mobile} {
     display: none;
+  }
+
+  &:hover {
+    
   }
 }
 
