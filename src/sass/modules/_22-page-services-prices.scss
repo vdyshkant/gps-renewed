@@ -54,6 +54,8 @@
     }
     @media #{$mobile} {
       width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
 }
@@ -96,7 +98,7 @@
   & .services-left-wrapper {
     @include clearfix;
     @media #{$mobile} {
-      width: 290px;
+      width: 310px;
       margin: 0 auto;
     }
   }
@@ -122,6 +124,7 @@
     float: left;
     padding-right: 20px;
     width: 40%;
+    padding-left: 10px;
     // outline: 2px dashed black;
     // outline-offset: -2px;
     @media #{$mobile} {
@@ -144,6 +147,7 @@
     display: block;
     width: 20%;
     min-width: 130px;
+    max-width: 165px;
     margin-right: 6.5%;
     margin-bottom: 35px;
     color: #5b5b5b;
@@ -155,6 +159,16 @@
     transition: background-color 0.7s ease-out;
     cursor: pointer;
 
+    @media #{$tablet} {
+      width: 42%;
+      max-width: 165px;
+    }
+
+    @media #{$mobile} {
+      width: auto;
+      width: 153px;
+    }
+
     // outline: 2px dashed crimson;
     // outline-offset: -2px;
     &::after {
@@ -163,6 +177,10 @@
         padding-bottom: 100%;
     }
     @media #{$desktop} {
+      width: 31.333333333%;
+      max-width: 165px;
+      margin-right: 3%;
+
       &:nth-child(3n+1) {
         clear: left;
       }
@@ -179,13 +197,19 @@
       }
     }
     @media #{$mobile} {
-      margin-right: 30px;
+      margin-right: 4px;
+      margin-bottom: 4px;
       &:nth-child(2n) {
         margin-right: 0;
       }
       &:last-child{
         margin-left: 80px;
       }
+    }
+
+    & p {
+      width: 140px;
+      transition: .7s ease-out;
     }
     &:hover {
       background-color: #3E8AE2;
@@ -226,7 +250,7 @@
     & .i {
       font-size: 80px;
       position: absolute;
-      top: 0;
+      top: 4px;
       left: 50%;
       transform: translateX(-48%);
     }
@@ -364,7 +388,8 @@
     display: block;
     height: 34px;
     position: absolute;
-    bottom: 3%;
+    // bottom: 3%;
+    top: 62%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -374,6 +399,11 @@
     display: block;
     color: #5b5b5b;
     margin-bottom: 5px;
+
+    @media #{$mobile} {
+      font-size: 10px;
+    }
+
     & span {
       display: block;
       white-space: nowrap;
