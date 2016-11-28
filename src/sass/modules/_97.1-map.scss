@@ -43,7 +43,7 @@ $color-marker-bg: $color-primary;
 
 }
 
-body {
+.page-home body {
   background-color: $color-bg;
   color: $color;
   font: $font-weight #{$font-size}/#{$line-height} $font-family, $font-family-fallback;
