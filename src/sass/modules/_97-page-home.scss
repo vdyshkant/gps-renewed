@@ -131,10 +131,14 @@
     }
 
     & .menu__sidebar__item__link__text,
-    & .menu__address p,
     & .menu__phone p {
       color: #fff;
     }
+
+    & .menu__address p {
+      color: #5B5B5B;
+    }
+
   }
 }
 
