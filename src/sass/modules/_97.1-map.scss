@@ -161,14 +161,14 @@ body {
 
   }
 
-  &-marker-chicago {
-    left: 65%;
-    top: 35%;
+  &-marker-12 {
+    left: 11%;
+    top: 28%;
   }
 
-  &-marker-florida {
-    left: 85%;
-    top: 86%;
+  &-marker-3 {
+    left: 25%;
+    top: 34%;
 
     &:after {
       animation-delay: 3s;
@@ -176,9 +176,9 @@ body {
 
   }
 
-  &-marker-los-angeles {
-    left: 7%;
-    top: 60%;
+  &-marker-4 {
+    left: 13%;
+    top: 53%;
 
     &:after {
       animation-delay: 5s;
@@ -186,14 +186,14 @@ body {
 
   }
 
-  &-marker-new-york {
-    left: 91%;
-    top: 31%;
+  &-marker-2 {
+    left: 11%;
+    top: 75%;
   }
 
-  &-marker-san-francisco {
-    left: 1%;
-    top: 46%;
+  &-marker-7 {
+    left: 41%;
+    top: 13%;
 
     &:after {
       animation-delay: 3s;
@@ -201,9 +201,99 @@ body {
 
   }
 
-  &-marker-seattle {
-    left: 8%;
-    top: 1%;
+  &-marker-10 {
+    left: 55%;
+    top: 2%;
+
+    &:after {
+      animation-delay: 3s;
+    }
+
+  }
+
+  &-marker-6 {
+    left: 56%;
+    top: 13%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-1 {
+    left: 61%;
+    top: 28%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-5 {
+    left: 64%;
+    top: 36%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-9 {
+    left: 74%;
+    top: 21%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-11 {
+    left: 82%;
+    top: 33%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-8 {
+    left: 88%;
+    top: 36%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-13 {
+    left: 55%;
+    top: 82%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-14 {
+    left: 60%;
+    top: 79%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-main-office {
+    left: 73%;
+    top: 76%;
 
     &:after {
       animation-delay: 5s;
@@ -218,7 +308,7 @@ body {
     bottom: 0;
     transform: translate(-50%, -2em);
     width: 20em;
-    z-index: 999;
+    z-index: 9999;
 
     header {
       background-color: $color-box-header-bg;
