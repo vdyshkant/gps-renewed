@@ -20,32 +20,90 @@ mixin breadcrumbs(arr)
         p.sub-title Данный сервис поможет Вам узнать ориентировочную дату доставки Вашего отправления
         form.form-content.form-nearest
           .content-table
+
+            //- NEW ROW
             .content-table-row
               .content-table-cell.content-table-cell__left
                 span Дата отправки
               .content-table-cell.content-table-cell__right
                 input(type="date")
+
+            //-  NEW ROW
             .content-table-row
               .content-table-cell.content-table-cell__left
                 span Город-отправитель
               .content-table-cell.content-table-cell__right
                 .select-essence
                   select
+                    option Астана
+                    option Актау
+                    option Актобе
                     option Алматы
-                    option опцияАстана
-                    option опцияАстана
-                    option опцияАстана
+                    option Атырау
+                    option Аксай (ЗКО)
+                    option Балхаш
+                    option Жезказган
+                    option Караганда
+                    option Кокшетау
+                    option Костанай
+                    option Кызылорда
+                    option Оскемен
+                    option Павлодар
+                    option Петропавловск
+                    option Семей
+                    option Талдыкорган
+                    option Тараз
+                    option Темиртау
+                    option Уральск
+                    option Шымкент
+                    option Экибастуз
                   i.fa.fa-angle-down(aria-hidden="true")
+
+            //-  NEW ROW
             .content-table-row
               .content-table-cell.content-table-cell__left
                 span Город-получатель
               .content-table-cell.content-table-cell__right
                 .select-essence
                   select
+                    option Астана
+                    option Актау
                     option Актобе
-                    option опцияАктобе
-                    option опцияАктобе
-                    option опцияАктобе
+                    option Алматы
+                    option Атырау
+                    option Аксай (ЗКО)
+                    option Балхаш
+                    option Жезказган
+                    option Караганда
+                    option Кокшетау
+                    option Костанай
+                    option Кызылорда
+                    option Оскемен
+                    option Павлодар
+                    option Петропавловск
+                    option Семей
+                    option Талдыкорган
+                    option Тараз
+                    option Темиртау
+                    option Уральск
+                    option Шымкент
+                    option Экибастуз
                   i.fa.fa-angle-down(aria-hidden="true")
+
+            //-  NEW ROW
+            .content-table-row
+              .content-table-cell.content-table-cell__left
+                span Услуга
+              .content-table-cell.content-table-cell__right
+                .select-essence
+                  select
+                    option «EXPRESS»
+                    option ГНСХ
+                  i.fa.fa-angle-down(aria-hidden="true")
+
+
+
+
+
           button.btn.btn-form.btn--terms(type="submit") Рассчитать дату
           a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"], input[type=\"date\"]').val('');") Очистить
