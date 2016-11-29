@@ -26,7 +26,7 @@ mixin breadcrumbs(arr)
               .content-table-cell.content-table-cell__left
                 span Дата отправки
               .content-table-cell.content-table-cell__right
-                input(type="date")
+                input#datePickInput.js-de-date(type="text" placeholder="дд - мм - гггг")
 
             //-  NEW ROW
             .content-table-row
@@ -34,29 +34,29 @@ mixin breadcrumbs(arr)
                 span Город-отправитель
               .content-table-cell.content-table-cell__right
                 .select-essence
-                  select
-                    option Астана
-                    option Актау
-                    option Актобе
-                    option Алматы
-                    option Атырау
-                    option Аксай (ЗКО)
-                    option Балхаш
-                    option Жезказган
-                    option Караганда
-                    option Кокшетау
-                    option Костанай
-                    option Кызылорда
-                    option Оскемен
-                    option Павлодар
-                    option Петропавловск
-                    option Семей
-                    option Талдыкорган
-                    option Тараз
-                    option Темиртау
-                    option Уральск
-                    option Шымкент
-                    option Экибастуз
+                  select.js-de-sender
+                    option#id01(value="0") Астана
+                    option#id02(value="1") Актау
+                    option#id4444(value="2") Актобе
+                    option#id4444(value="3") Алматы
+                    option#id4444(value="4") Атырау
+                    option#id4444(value="5") Аксай (ЗКО)
+                    option#id4444(value="6") Балхаш
+                    option#id4444(value="7") Жезказган
+                    option#id4444(value="8") Караганда
+                    option#id4444(value="9") Кокшетау
+                    option#id4444(value="10") Костанай
+                    option#id4444(value="11") Кызылорда
+                    option#id4444(value="12") Оскемен
+                    option#id4444(value="13") Павлодар
+                    option#id4444(value="14") Петропавловск
+                    option#id4444(value="15") Семей
+                    option#id4444(value="16") Талдыкорган
+                    option#id4444(value="17") Тараз
+                    option#id4444(value="18") Темиртау
+                    option#id4444(value="19") Уральск
+                    option#id4444(value="20") Шымкент
+                    option#id4444(value="21") Экибастуз
                   i.fa.fa-angle-down(aria-hidden="true")
 
             //-  NEW ROW
@@ -65,29 +65,29 @@ mixin breadcrumbs(arr)
                 span Город-получатель
               .content-table-cell.content-table-cell__right
                 .select-essence
-                  select
-                    option Астана
-                    option Актау
-                    option Актобе
-                    option Алматы
-                    option Атырау
-                    option Аксай (ЗКО)
-                    option Балхаш
-                    option Жезказган
-                    option Караганда
-                    option Кокшетау
-                    option Костанай
-                    option Кызылорда
-                    option Оскемен
-                    option Павлодар
-                    option Петропавловск
-                    option Семей
-                    option Талдыкорган
-                    option Тараз
-                    option Темиртау
-                    option Уральск
-                    option Шымкент
-                    option Экибастуз
+                  select.js-de-recipient
+                    option#id4444(value="0") Астана
+                    option#id4444(value="1") Актау
+                    option#id4444(value="2") Актобе
+                    option#id4444(value="3") Алматы
+                    option#id4444(value="4") Атырау
+                    option#id4444(value="5") Аксай (ЗКО)
+                    option#id4444(value="6") Балхаш
+                    option#id4444(value="7") Жезказган
+                    option#id4444(value="8") Караганда
+                    option#id4444(value="9") Кокшетау
+                    option#id4444(value="10") Костанай
+                    option#id4444(value="11") Кызылорда
+                    option#id4444(value="12") Оскемен
+                    option#id4444(value="13") Павлодар
+                    option#id4444(value="14") Петропавловск
+                    option#id4444(value="15") Семей
+                    option#id4444(value="16") Талдыкорган
+                    option#id4444(value="17") Тараз
+                    option#id4444(value="18") Темиртау
+                    option#id4444(value="19") Уральск
+                    option#id4444(value="20") Шымкент
+                    option#id4444(value="21") Экибастуз
                   i.fa.fa-angle-down(aria-hidden="true")
 
             //-  NEW ROW
@@ -96,14 +96,22 @@ mixin breadcrumbs(arr)
                 span Услуга
               .content-table-cell.content-table-cell__right
                 .select-essence
-                  select
-                    option «EXPRESS»
-                    option ГНСХ
+                  select.js-de-howFast
+                    option(value="0") «EXPRESS»
+                    option(value="1") ГНСХ
                   i.fa.fa-angle-down(aria-hidden="true")
 
 
+            //-  NEW ROW
+            .content-table-row.js-de-output
+              .content-table-cell.content-table-cell__left
+                span.js-de-noway Результат рассчета:
+              .content-table-cell.content-table-cell__right
+                .js-de-content
 
 
 
-          button.btn.btn-form.btn--terms(type="submit") Рассчитать дату
+
+
+          a.btn.btn-form.btn--terms Рассчитать дату
           a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"], input[type=\"date\"]').val('');") Очистить
