@@ -7,7 +7,19 @@
     background: none;
   }
 }
+// js-calculator
 
+.page-terms .js-de-output,
+.page-terms .js-de-content{
+  opacity: 0;
+
+}
+.page-terms .js-de-output .content-table-cell__right {
+  padding-top: 12px;
+  min-height: 44px;
+}
+
+// eof js-calculator
 
 .page-terms {
   & .inner {
