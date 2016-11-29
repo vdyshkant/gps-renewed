@@ -35,10 +35,6 @@
       font-size: 45px;
     }
   }
-
-  & .fa-user {
-    display: none;
-  }
 }
 
 .user-block__menu__item {
@@ -63,6 +59,14 @@
       float: left;
     }
   }
+  // TMP start
+  &:nth-child(2){
+    margin-right: 0;
+  }
+  &:nth-child(3){
+    display: none;
+  }
+  // TMP eof
 }
 
 .user-block__menu__item__link {
@@ -108,7 +112,7 @@
   }
 
   &:hover {
-    
+
   }
 }
 
