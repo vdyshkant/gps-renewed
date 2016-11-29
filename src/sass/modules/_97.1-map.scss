@@ -17,7 +17,8 @@ $h3-font-size: 1.25em;
 $color: #7e7e7e;
 $color-bg: #32425a;
 
-$color-primary: #ce606f;
+// $color-primary: #ce606f;
+$color-primary: dodgerblue;
 
 $color-link: $color-primary;
 $color-headings: #fff;
@@ -86,7 +87,11 @@ $color-marker-bg: $color-primary;
 .page-home .map svg {
   height: auto;
   max-width: 100%;
-  max-width: 770px;
+  max-width: 709px;
+  @media #{$mobile} {
+    width: 312px;
+    margin: 0 auto;
+  }
 }
 
 // Heplers
@@ -116,6 +121,11 @@ $color-marker-bg: $color-primary;
 .page-home .map {
   margin-top: 3em;
   position: relative;
+  width: 709px;
+  @media #{$mobile} {
+    width: 312px;
+    margin: 0 auto;
+  }
 
   &-markers {
     list-style: none;
@@ -135,17 +145,25 @@ $color-marker-bg: $color-primary;
       content: '';
       height: 2em;
       left: 0;
-      margin: -.5em 0 0 -.5em;
+      margin: -0.5em 0 0 -0.5em;
       opacity: 0;
       position: absolute;
       top: 0;
       width: 2em;
+      @media #{$mobile} {
+        // width: 8px;
+        // height: 8px;
+        margin: -12px 0 0 -12px;
+      }
     }
 
     &:hover {
 
       .map-marker-info {
         display: block;
+        @media #{$mobile} {
+          display: none;
+        }
       }
 
     }
@@ -157,18 +175,42 @@ $color-marker-bg: $color-primary;
       display: block;
       text-indent: -9999px;
       width: 1em;
+      @media #{$mobile} {
+        width: 8px;
+        height: 8px;
+      }
     }
 
   }
 
   &-marker-12 {
-    left: 11%;
-    top: 28%;
+    // left: 11%;
+    // top: 28%;
+    left: 85px;
+    top: 126px;
+    @media #{$tablet-wide} {
+      left: 78px;
+      top: 116px;
+    }
+    @media #{$mobile} {
+      left: 33px;
+      top: 51px;
+    }
   }
 
   &-marker-3 {
-    left: 25%;
-    top: 34%;
+    // left: 25%;
+    // top: 34%;
+    left: 193px;
+    top: 153px;
+    @media #{$tablet-wide} {
+      left: 179px;
+      top: 141px;
+    }
+    @media #{$mobile} {
+      left: 79px;
+      top: 60px;
+    }
 
     &:after {
       animation-delay: 3s;
@@ -177,8 +219,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-4 {
-    left: 13%;
-    top: 53%;
+    // left: 13%;
+    // top: 53%;
+    top: 239px;
+    left: 100px;
+    @media #{$tablet-wide} {
+      top: 219px;
+      left: 92px;
+    }
+    @media #{$mobile} {
+      top: 98px;
+      left: 43px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -187,13 +239,33 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-2 {
-    left: 11%;
-    top: 75%;
+    // left: 11%;
+    // top: 75%;
+    left: 85px;
+    top: 338px;
+    @media #{$tablet-wide} {
+      left: 78px;
+      top: 309px;
+    }
+    @media #{$mobile} {
+      left: 35px;
+      top: 135px;
+    }
   }
 
   &-marker-7 {
-    left: 41%;
-    top: 13%;
+    // left: 41%;
+    // top: 13%;
+    left: 316px;
+    top: 59px;
+    @media #{$tablet-wide} {
+      left: 292px;
+      top: 56px;
+    }
+    @media #{$mobile} {
+      left: 129px;
+      top: 24px;
+    }
 
     &:after {
       animation-delay: 3s;
@@ -202,8 +274,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-10 {
-    left: 55%;
-    top: 2%;
+    // left: 55%;
+    // top: 2%;
+    left: 424px;
+    top: 9px;
+    @media #{$tablet-wide} {
+      left: 390px;
+      top: 9px;
+    }
+    @media #{$mobile} {
+      left: 172px;
+      top: 3px;
+    }
 
     &:after {
       animation-delay: 3s;
@@ -212,8 +294,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-6 {
-    left: 56%;
-    top: 13%;
+    // left: 56%;
+    // top: 13%;
+    left: 431px;
+    top: 59px;
+    @media #{$tablet-wide} {
+      left: 401px;
+      top: 54px;
+    }
+    @media #{$mobile} {
+      left: 175px;
+      top: 23px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -222,8 +314,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-1 {
-    left: 61%;
-    top: 28%;
+    // left: 61%;
+    // top: 28%;
+    left: 470px;
+    top: 126px;
+    @media #{$tablet-wide} {
+      left: 430px;
+      top: 111px;
+    }
+    @media #{$mobile} {
+      left: 188px;
+      top: 50px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -232,8 +334,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-5 {
-    left: 64%;
-    top: 36%;
+    // left: 64%;
+    // top: 36%;
+    left: 493px;
+    top: 162px;
+    @media #{$tablet-wide} {
+      left: 456px;
+      top: 142px;
+    }
+    @media #{$mobile} {
+      left: 202px;
+      top: 64px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -242,8 +354,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-9 {
-    left: 74%;
-    top: 21%;
+    // left: 74%;
+    // top: 21%;
+    left: 570px;
+    top: 95px;
+    @media #{$tablet-wide} {
+      left: 522px;
+      top: 88px;
+    }
+    @media #{$mobile} {
+      left: 228px;
+      top: 37px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -252,8 +374,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-11 {
-    left: 82%;
-    top: 33%;
+    // left: 82%;
+    // top: 33%;
+    left: 632px;
+    top: 149px;
+    @media #{$tablet-wide} {
+      left: 582px;
+      top: 133px;
+    }
+    @media #{$mobile} {
+      left: 255px;
+      top: 59px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -262,8 +394,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-8 {
-    left: 88%;
-    top: 36%;
+    // left: 88%;
+    // top: 36%;
+    left: 678px;
+    top: 162px;
+    @media #{$tablet-wide} {
+      left: 625px;
+      top: 141px;
+    }
+    @media #{$mobile} {
+      left: 275px;
+      top: 62px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -272,8 +414,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-13 {
-    left: 55%;
-    top: 82%;
+    // left: 55%;
+    // top: 82%;
+    left: 424px;
+    top: 369px;
+    @media #{$tablet-wide} {
+      left: 388px;
+      top: 343px;
+    }
+    @media #{$mobile} {
+      left: 169px;
+      top: 151px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -282,8 +434,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-14 {
-    left: 60%;
-    top: 79%;
+    // left: 60%;
+    // top: 79%;
+    top: 356px;
+    left: 462px;
+    @media #{$tablet-wide} {
+      top: 326px;
+      left: 422px;
+    }
+    @media #{$mobile} {
+      top: 144px;
+      left: 185px;
+    }
 
     &:after {
       animation-delay: 5s;
@@ -292,8 +454,18 @@ $color-marker-bg: $color-primary;
   }
 
   &-marker-main-office {
-    left: 73%;
-    top: 76%;
+    // left: 73%;
+    // top: 76%;
+    left: 562px;
+    top: 342px;
+    @media #{$tablet-wide} {
+      left: 515px;
+      top: 315px;
+    }
+    @media #{$mobile} {
+      left: 226px;
+      top: 137px;
+    }
 
     &:after {
       animation-delay: 5s;
