@@ -255,7 +255,7 @@ $(document).ready(function() {
         return date.valueOf < now.valueOf() ? 'disabled' : '';
       },
       language: 'ru',
-      format: 'dd-dd-yyyy',
+      format: 'dd-mm-yyyy',
       startDate: new Date(),
       weekStart: 1
     });
@@ -286,7 +286,7 @@ $(document).ready(function() {
 
 
   // console.warn('after func work "output" var === ' + output);
-      // console.log(output + ' дней будет занимать вся суета с перевозкой вашего барахла');
+      //- console.log(output + ' дней будет занимать вся суета с перевозкой вашего барахла');
 
       var isHidden;
 
@@ -296,11 +296,11 @@ $(document).ready(function() {
         var deliveryRange = output.split('-');
           // console.log('после изъятия с output, deliveryRange == ' + deliveryRange);
 
-          // moment.js
+          //- moment.js
 
           var sendDate = $('#datePickInput').val().split('-')
-            , sendDay = parseInt(sendDate[1])
-            , sendMonth = parseInt(sendDate[0])-1
+            , sendDay = parseInt(sendDate[0])
+            , sendMonth = parseInt(sendDate[1])-1
             , sendYear = parseInt(sendDate[2]);
 
 
@@ -317,10 +317,13 @@ $(document).ready(function() {
 
         if ($('#datePickInput').val()) {
 
+          var fromDate;
+          var toDate;
+
           if (deliveryRange.length > 1) {
             // output = 'Перевозка будет занимать от ' + deliveryRange[0] + ' до ' + deliveryRange[1] + ' дней.';
-            var fromDate = moment().year(sendYear).month(sendMonth).date(sendDay).add(deliveryRange[0], 'day').format('DD-MM-YYYY')
-              , toDate = moment().year(sendYear).month(sendMonth).date(sendDay).add(deliveryRange[1], 'day').format('DD-MM-YYYY');
+            fromDate = moment().year(sendYear).month(sendMonth).date(sendDay).add(deliveryRange[0], 'day').format('DD-MM-YYYY');
+            toDate = moment().year(sendYear).month(sendMonth).date(sendDay).add(deliveryRange[1], 'day').format('DD-MM-YYYY');
 
             output = 'Ожидайте посылку в период с ' + fromDate + ' по ' + toDate + '.';
           } else {
