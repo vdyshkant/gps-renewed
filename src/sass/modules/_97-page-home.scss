@@ -592,7 +592,7 @@
   & .tool__items__wrapper {
     @include clearfix;
     @media #{$mobile} {
-      width: 260px;
+      width: 220px;
       margin: 0 auto;
       & .tool__item:nth-child(2n){
         margin-right: 0;
@@ -655,9 +655,10 @@
 
     @media #{$mobile} {
       margin-right: 20px;
+      min-width: 100px;
       &:nth-child(1),
       &:nth-child(2) {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
       &:nth-child(3) {
         clear: both;
@@ -693,6 +694,11 @@
         top: 0;
         left: 53%;
         transform: translateX(-50%);
+
+        @media #{$mobile} {
+          width: 80px;
+          height: 60px;
+        }
       }
     }
 
@@ -718,6 +724,10 @@
       transform: translateX(-50%);
 
       font-weight: 700;
+
+      @media #{$mobile} {
+        top: 70%;
+      }
     }
   }
 }
