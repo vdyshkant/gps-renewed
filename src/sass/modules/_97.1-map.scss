@@ -122,6 +122,10 @@ $color-marker-bg: $color-primary;
   margin-top: 3em;
   position: relative;
   width: 709px;
+
+  @media #{$laptop-wide} {
+    margin-left: 150px;
+  }
   @media #{$mobile} {
     width: 312px;
     margin: 0 auto;
