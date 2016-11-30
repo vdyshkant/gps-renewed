@@ -275,9 +275,19 @@
   }
 }
 
+.page-not-found .main {
+  @media #{$mobile} {
+    padding-bottom: 180px;
+  }
+}
+
 .page-not-found .main .breadcrumbs {
 
   margin-bottom: 180px;
+
+  @media #{$mobile} {
+    margin-bottom: 50px;
+  }
 }
 
 .page-not-found .main .breadcrumbs li {
