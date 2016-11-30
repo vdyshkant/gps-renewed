@@ -29,13 +29,6 @@
 
 
 .page-accountant {
-  & .main {
-    max-width: 670px;
-    padding-right: 80px;
-  }
-}
-
-.page-accountant {
   & .sub-title {
     max-width: none;
     margin-bottom: 80px;
@@ -293,12 +286,52 @@
 }
 
 
-.page-accountant .main {
+.page-accountant {
+  & .main {
+    max-width: 670px;
+    padding-right: 80px;
 
-  width: 670px;
-  padding-left: 0px;
-  margin-left: 230px;
+    width: 670px;
+
+    padding-right: 80px;
+    padding-left: 0px;
+
+    margin-left: 230px;
+
+    @media #{$tablet} {
+      margin: 0 auto;
+        // min-width: 600px;
+        // max-width: 600px;
+
+      padding-left: 7%;
+      padding-right: 0;
+      // padding-right: 0px;
+      // max-width: 100%;
+      // min-width: 670px;
+      // width: 670px;
+      width: 670px;
+      // max-width: none;
+      // margin-right: 0;
+
+      & .wrap > .inner {
+        margin-right: 10px;
+      }
+    }
+
+    @media #{$mobile} {
+      margin: 0 auto;
+      padding-right: 0;
+      min-width: none;
+      width: auto;
+      max-width: 600px;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      padding-bottom: 140px;
+    }
+  }
 }
+
 
 
 .page-accountant .main .breadcrumbs {
@@ -321,9 +354,11 @@
 
 
 .page-accountant .footer__outer {
+  @media #{$desktop} {
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
 }
 
 .page-accountant .footer__menu__item {
@@ -417,6 +452,12 @@
 
   position: relative;
 
+  @media #{$mobile-tablet} {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
   & > .pic {
     position: absolute;
     top: 30px;
@@ -442,6 +483,13 @@
 .page-accountant .upload_mod__right {
   float: right;
   width: 510px;
+  @media #{$mobile} {
+    width: auto;
+  }
+
+  @media #{$mobile-tablet} {
+    float: none;
+  }
 
   & > .text {
     margin-bottom: 6px;
