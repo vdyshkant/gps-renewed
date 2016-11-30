@@ -44,14 +44,19 @@ block content
           //- .breadcrumb
           //-   a.breadcrumb__link(href="/") На главную
           +breadcrumbs([
-             { 'anchor':'На главную','link':'/index.html' },
+             { 'anchor':'Главная','link':'/index.html' },
+             { 'anchor':'404 - Страница не найдена'},
            ])(class='')      //- <== u can add additional class here.
           .content
-            .inner
-              h1.title 404 - Страница не найдена
-              .content-text
-                p
-                  | Данная страница временно недоступна.
+            .content-container
+              .class404
+                //- | 404
+                .cross-text
+                  | Запрашиваемая вами страница не найдена
+              .subline
+                | Вы можете воспользоваться навигацией по сайту
+
+
 
     include _modules/page-schedule/menu
 

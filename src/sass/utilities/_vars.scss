@@ -61,5 +61,6 @@ $laptop: "only screen and (min-width: "$break-desktop") and (max-width: "$break-
 $wide: "only screen and (min-width: "$break-wide")";
 $tablet-laptop:  "only screen and (min-width: "$break-tablet") and (max-width: "$break-wide - 1")";
 $laptop-wide:  "only screen and (min-width: "$break-laptop")";
+$desktop-wide:  "only screen and (min-width: "$break-desktop")";
 $tablet-wide:  "only screen and (min-width: "$break-tablet")";
 $desktop-laptop:  "only screen and (min-width: "$break-desktop") and (max-width: "$break-wide - 1")";
