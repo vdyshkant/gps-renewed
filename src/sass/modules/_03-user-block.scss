@@ -131,6 +131,10 @@
 }
 
 .user-block {
+  & .lang__item {
+    @include clearfix;
+  }
+
   & .lang {
     margin-right: 50px;
     // @media #{$tablet} {
