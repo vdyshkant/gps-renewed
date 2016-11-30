@@ -1,17 +1,17 @@
-/* === Page 'accountant' === */
+/* === Page 'vacancies' === */
 
 
 
-.page-accountant {
+.page-vacancies {
   @media #{$desktop-wide} {
-    background: url("../img/025_bg.jpg") right top no-repeat;
+    background: url("../img/026_bg.jpg") right top no-repeat;
   }
   background: #fff;
 
 }
 
 
-.page-accountant {
+.page-vacancies {
 
   & .form-content {
     margin-bottom: 60px;
@@ -19,7 +19,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & label:last-child {
     margin-bottom: 50px;
   }
@@ -28,25 +28,20 @@
 // EOF common styles;
 
 
-.page-accountant {
-  & .main {
-    max-width: 670px;
-    padding-right: 80px;
-  }
-}
 
-.page-accountant {
+
+.page-vacancies {
   & .sub-title {
     max-width: none;
-    margin-bottom: 80px;
+    margin-bottom: 45px;
 
     @include font(normal, 400, 16px, 27px, 'HelveticaNeueCyr-Medium');
   }
 }
 
 
-.page-accountant {
-  & .btn--page-accountant {
+.page-vacancies {
+  & .btn--page-vacancies {
     text-decoration: none;
     font-size: 14px;
     float: right;
@@ -65,7 +60,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content-text p {
     max-width: 450px;
     @media #{$mobile} {
@@ -75,19 +70,19 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__advantages {
     margin-bottom: 60px;
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__advantages__row {
     @include clearfix;
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__advantages__cell {
     float: left;
     width: 23%;
@@ -113,7 +108,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__advantages__num {
     font-weight: bold;
     padding-bottom: 5px;
@@ -127,7 +122,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__advantages__essense {
     color: #5b5b5b;
     font-size: 14px;
@@ -135,19 +130,19 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__honors__table {
     margin-bottom: 60px;
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__honors__row {
     @include clearfix;
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__honors__cell {
     float: left;
     width: 16%;
@@ -158,7 +153,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__partners__table {
     margin-bottom: 60px;
     @media #{$mobile} {
@@ -167,13 +162,13 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__partners__row {
     @include clearfix;
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content__partners__cell {
     text-align: center;
     float: left;
@@ -201,7 +196,7 @@
   }
 }
 
-// .page-accountant {
+// .page-vacancies {
 //   & .user-block__menu .fa {
 //     color: rgba(91, 91, 91, 1);
 //     &:hover {
@@ -230,7 +225,7 @@
 
 
 // content container
-.page-accountant {
+.page-vacancies {
   & .content-container {
     @media #{$desktop} {
       margin-left: 120px;
@@ -238,7 +233,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content-container .class404 {
     position: relative;
 
@@ -260,7 +255,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content-container .cross-text {
     position: absolute;
     top: 72px;
@@ -278,7 +273,7 @@
   }
 }
 
-.page-accountant {
+.page-vacancies {
   & .content-container .subline {
     width: 426px;
     text-align: center;
@@ -293,40 +288,77 @@
 }
 
 
-.page-accountant .main {
+.page-vacancies {
+  & .main {
+    max-width: 670px;
+    width: 670px;
 
-  width: 670px;
-  padding-left: 0px;
-  margin-left: 230px;
+    padding-right: 80px;
+    padding-left: 0px;
+
+    margin-left: 230px;
+
+    @media #{$tablet} {
+      margin: 0 auto;
+        min-width: 600px;
+        max-width: 600px;
+
+      padding-left: 5%;
+      padding-right: 0;
+      // padding-right: 0px;
+      // max-width: 100%;
+      // min-width: 670px;
+      // width: 670px;
+      width: auto;
+      // max-width: none;
+      // margin-right: 0;
+
+      & .wrap > .inner {
+        margin-right: 10px;
+      }
+    }
+
+    @media #{$mobile} {
+      margin: 0 auto;
+      padding-right: 0;
+      min-width: none;
+      width: auto;
+      max-width: 600px;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      padding-bottom: 140px;
+    }
+  }
 }
 
 
-.page-accountant .main .breadcrumbs {
+.page-vacancies .main .breadcrumbs {
 
   margin-bottom: 20px;
 }
 
-.page-accountant .main .breadcrumbs li {
+.page-vacancies .main .breadcrumbs li {
 
   &:last-child a {
     font-weight: 700;
     color: #999;
-    text-transform: initial;
+    // text-transform: initial;
   }
 }
 
-.page-accountant .main .breadcrumbs > li > a {
+.page-vacancies .main .breadcrumbs > li > a {
   color: #bbb;
 }
 
 
-.page-accountant .footer__outer {
+.page-vacancies .footer__outer {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-.page-accountant .footer__menu__item {
+.page-vacancies .footer__menu__item {
   &:first-child {
     & .footer__menu__item__link {
       @media #{$tablet-desktop} {
@@ -337,11 +369,11 @@
 }
 
 
-.page-accountant .btn--acc {
+.page-vacancies .btn--acc {
     float: left;
 }
 
-.page-accountant h1.title {
+.page-vacancies h1.title {
     @include font(normal, 700, 17px, 27px, 'HelveticaNeueCyr-Bold');
 
     color: #5b5b5b;
@@ -368,7 +400,7 @@
 
 }
 
-.page-accountant .send_cv > .title {
+.page-vacancies .send_cv > .title {
   color: #3e8ae2;
   @include font(normal, 700, 17px, 27px, 'HelveticaNeueCyr-Bold');
 
@@ -390,147 +422,86 @@
   }
 }
 
-.page-accountant .content-pub-date {
+.page-vacancies .content-pub-date {
   margin-bottom: 20px;
 }
 
 
-
-.page-accountant .upload_mod {
-  margin-bottom: 60px;
-  @include clearfix;
-}
-
-
-.page-accountant .file-upload-button {
-  cursor: pointer;
-}
-
-
-.page-accountant .upload_mod__left {
-  float: left;
-  display: block;
-  width: 130px;
-  height: 130px;
-  border: 1px solid #3e8ae2;
-  margin-right: 30px;
-
-  position: relative;
-
-  & > .pic {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url('../img/acc_upload_pic.png') no-repeat;
-    width: 48px;
-    height: 48px;
-  }
-
-  & > .text {
-    position: absolute;
-    top: 88px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @include font(normal, 500, 12px, 11px, 'HelveticaNeueCyr-Medium');
-    color: #5b5b5b;
-  }
-}
-
-
-.page-accountant .upload_mod__right {
-  float: right;
-  width: 510px;
-
-  & > .text {
-    margin-bottom: 6px;
-    @include font(normal, 500, 14px, 28px, 'HelveticaNeueCyr-Medium');
-    color: #5b5b5b;
-
-  }
-
-  & > .title {
-    @include font(normal, 700, 17px, 28px, 'HelveticaNeueCyr-Bold');
-    color: #5b5b5b;
-
-  }
-
-  & > .list {
-
-  }
-
-  & > .list .list_item {
-    @include font(normal, 500, 14px, 24px, 'HelveticaNeueCyr-Medium');
-    color: #5b5b5b;
-  }
-}
-
-
-.page-accountant .PROTO {
+.page-vacancies .PROTO {
 
 }
 
 
-.page-accountant .PROTO {
-
-}
-
-
-.page-accountant .PROTO {
-
-}
-
-
-.page-accountant .send_cv__form {
+.page-vacancies .vacancies_item {
+  box-shadow: 2px 2px 7px 0px rgba(68, 67, 65, 0.2);
+  margin-bottom: 30px;
+  min-height: 80px;
   width: 100%;
+  padding: 20px;
+  @include clearfix;
+
+  & .left {
+    float: left;
+
+    @media #{$mobile} {
+      float: none;
+    }
+  }
+  & .right {
+    float: right;
+    width: 140px;
+    text-align: right;
+
+    @media #{$mobile} {
+      float: none;
+      width: auto;
+      @include clearfix;
+
+      & .salary {
+        float: right;
+      }
+      & .city {
+        float: left;
+      }
+    }
+  }
 }
 
 
-// label
-.page-accountant .send_cv__input-label {
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 55px;
-}
 
-
-// input
-.page-accountant .send_cv__input {
-
-  height: 40px;
-  font-size: 14px;
-  @include font(normal, 400, 17px, 28px, 'HelveticaNeueCyr-Medium');
-  color: #999;
-  border: 1px solid #5b5b5b;
-  outline: none;
-  text-overflow: ellipsis;
-
-}
-
-// name
-.page-accountant .send_cv__input-name {
+.page-vacancies .vacancies_item .title {
   @include font(normal, 700, 17px, 28px, 'HelveticaNeueCyr-Bold');
+  color: #901618;
+
+
+}
+
+
+.page-vacancies .vacancies_item .opened_date {
+  @include font(normal, 500, 12px, 28px, 'HelveticaNeueCyr-Medium');
   color: #5b5b5b;
-  margin-left: 20px;
-  margin-bottom: 0;
-
-  position: absolute;
-  top: -30px;
-}
 
 
-.page-accountant .PROTO {
+  & .pubdate {
+
+  }
 
 }
 
 
-.page-accountant .PROTO {
-
+.page-vacancies .vacancies_item .salary {
+  @include font(normal, 500, 14px, 28px, 'HelveticaNeueCyr-Medium');
+  color: #5b5b5b;
 }
 
 
-.page-accountant .PROTO {
+.page-vacancies .vacancies_item .city {
+  @include font(normal, 500, 17px, 28px, 'HelveticaNeueCyr-Bold');
+  color: #5b5b5b;
+}
+
+
+.page-vacancies .PROTO {
 
 }
 
