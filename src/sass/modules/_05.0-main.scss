@@ -18,7 +18,8 @@
         // width: 50%;
         width: 58%;
         min-width: 540px;
-        height: 100vh;
+        // height: 100vh;
+        height: 100%;
         background: #fff;
     }
 }
@@ -145,7 +146,7 @@
 
 
 .main {
-  & .title {
+  & h1.title {
     display: inline-block;
     font-size: 17px;
     // height: 40px;

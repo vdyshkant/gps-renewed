@@ -1,0 +1,537 @@
+/* === Page 'accountant' === */
+
+
+
+.page-accountant {
+  @media #{$desktop-wide} {
+    background: url("../img/025_bg.jpg") right top no-repeat;
+  }
+  background: #fff;
+
+}
+
+
+.page-accountant {
+
+  & .form-content {
+    margin-bottom: 60px;
+    @include clearfix;
+  }
+}
+
+.page-accountant {
+  & label:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+// EOF common styles;
+
+
+.page-accountant {
+  & .main {
+    max-width: 670px;
+    margin-right: 85px;
+  }
+}
+
+.page-accountant {
+  & .sub-title {
+    max-width: none;
+    margin-bottom: 80px;
+
+    @include font(normal, 400, 16px, 27px, 'HelveticaNeueCyr-Medium');
+  }
+}
+
+
+.page-accountant {
+  & .btn--page-accountant {
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    display: block;
+    padding: 15px;
+    background-color: #3E8AE2;
+    color: #FFF;
+    width: 290px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.7s ease-out;
+  }
+}
+
+.page-accountant {
+  & .content-text p {
+    max-width: 450px;
+    @media #{$mobile} {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+
+.page-accountant {
+  & .content__advantages {
+    margin-bottom: 60px;
+  }
+}
+
+.page-accountant {
+  & .content__advantages__row {
+    @include clearfix;
+  }
+}
+
+.page-accountant {
+  & .content__advantages__cell {
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+    @media #{$mobile} {
+      width: 47%;
+      margin-right: 6%;
+      margin-bottom: 25px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(2n){
+      @media #{$mobile} {
+        margin: 0;
+      }
+    }
+    &:nth-child(3n){
+      @media #{$mobile} {
+        clear: left;
+      }
+    }
+  }
+}
+
+.page-accountant {
+  & .content__advantages__num {
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 12pt;
+    display: inline-block;
+    width: 20px;
+
+    color: #034287;
+    border-bottom: 2px solid #034287;
+    margin-bottom: 30px;
+  }
+}
+
+.page-accountant {
+  & .content__advantages__essense {
+    color: #5b5b5b;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.page-accountant {
+  & .content__honors__table {
+    margin-bottom: 60px;
+  }
+}
+
+.page-accountant {
+  & .content__honors__row {
+    @include clearfix;
+  }
+}
+
+.page-accountant {
+  & .content__honors__cell {
+    float: left;
+    width: 16%;
+    margin-right: 4%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-accountant {
+  & .content__partners__table {
+    margin-bottom: 60px;
+    @media #{$mobile} {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.page-accountant {
+  & .content__partners__row {
+    @include clearfix;
+  }
+}
+
+.page-accountant {
+  & .content__partners__cell {
+    text-align: center;
+    float: left;
+    width: 23%;
+    margin-right: 2.5%;
+    @media #{$mobile} {
+      width: 47%;
+      margin-right: 6%;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(2n){
+      @media #{$mobile} {
+        margin: 0;
+        float: right;
+      }
+    }
+    &:nth-child(3n){
+      @media #{$mobile} {
+        clear: left;
+      }
+    }
+  }
+}
+
+// .page-accountant {
+//   & .user-block__menu .fa {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+//   & .user-block__menu__item__link {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+//   & .user-block__menu__item__title {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+//   & .lang .lang__link {
+//     color: rgba(91, 91, 91, 1);
+//     &:hover {
+//       color: rgba(91, 91, 91, .7);
+//     }
+//   }
+// }
+
+
+// content container
+.page-accountant {
+  & .content-container {
+    @media #{$desktop} {
+      margin-left: 120px;
+    }
+  }
+}
+
+.page-accountant {
+  & .content-container .class404 {
+    position: relative;
+
+    width: 426px;
+    min-height: 156px;
+
+    background: url('../img/404.jpg') no-repeat;
+    background-size: 100%;
+    margin-bottom: 30px;
+
+    @media #{$mobile} {
+      width: 286px;
+      margin: 0 auto;
+      min-height: 105px;
+    }
+
+    // outline: 2px dashed crimson;
+    // outline-offset: -2px;
+  }
+}
+
+.page-accountant {
+  & .content-container .cross-text {
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    color: #5b5b5b;
+    @include font(normal, 700, 17px, 27px, 'HelveticaNeueCyr-Bold');
+
+    @media #{$mobile} {
+      top: 45px;
+      @include font(normal, 700, 13px, 27px, 'HelveticaNeueCyr-Bold');
+    }
+  }
+}
+
+.page-accountant {
+  & .content-container .subline {
+    width: 426px;
+    text-align: center;
+    color: #5b5b5b;
+    @include font(normal, 700, 17px, 27px, 'HelveticaNeueCyr-Bold');
+
+    @media #{$mobile} {
+      width: 286px;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.page-accountant .main {
+
+  width: 670px;
+  padding-left: 0px;
+  margin-left: 230px;
+}
+
+
+.page-accountant .main .breadcrumbs {
+
+  margin-bottom: 20px;
+}
+
+.page-accountant .main .breadcrumbs li {
+
+  &:last-child a {
+    font-weight: 700;
+    color: #999;
+    text-transform: initial;
+  }
+}
+
+.page-accountant .main .breadcrumbs > li > a {
+  color: #bbb;
+}
+
+
+.page-accountant .footer__outer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.page-accountant .footer__menu__item {
+  &:first-child {
+    & .footer__menu__item__link {
+      @media #{$tablet-desktop} {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+
+.page-accountant .btn--acc {
+    float: left;
+}
+
+.page-accountant h1.title {
+    @include font(normal, 700, 17px, 27px, 'HelveticaNeueCyr-Bold');
+
+    color: #5b5b5b;
+    margin-bottom: 30px;
+    // border-bottom-color: #5b5b5b;
+    // border-bottom-style: solid;
+    // border-bottom-width: 4px;
+    border-bottom: none;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+
+
+      content: '';
+      width: 100%;
+      height: 4px;
+      background: #5b5b5b;
+    }
+
+}
+
+.page-accountant .send_cv > .title {
+  color: #3e8ae2;
+  @include font(normal, 700, 17px, 27px, 'HelveticaNeueCyr-Bold');
+
+  display: inline-block;
+  margin-bottom: 70px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+
+
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #3e8ae2;
+  }
+}
+
+.page-accountant .content-pub-date {
+  margin-bottom: 20px;
+}
+
+
+
+.page-accountant .upload_mod {
+  margin-bottom: 60px;
+  @include clearfix;
+}
+
+
+.page-accountant .file-upload-button {
+  cursor: pointer;
+}
+
+
+.page-accountant .upload_mod__left {
+  float: left;
+  display: block;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #3e8ae2;
+  margin-right: 30px;
+
+  position: relative;
+
+  & > .pic {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('../img/acc_upload_pic.png') no-repeat;
+    width: 48px;
+    height: 48px;
+  }
+
+  & > .text {
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include font(normal, 500, 12px, 11px, 'HelveticaNeueCyr-Medium');
+    color: #5b5b5b;
+  }
+}
+
+
+.page-accountant .upload_mod__right {
+  float: right;
+  width: 510px;
+
+  & > .text {
+    margin-bottom: 6px;
+    @include font(normal, 500, 14px, 28px, 'HelveticaNeueCyr-Medium');
+    color: #5b5b5b;
+
+  }
+
+  & > .title {
+    @include font(normal, 700, 17px, 28px, 'HelveticaNeueCyr-Bold');
+    color: #5b5b5b;
+
+  }
+
+  & > .list {
+
+  }
+
+  & > .list .list_item {
+    @include font(normal, 500, 14px, 24px, 'HelveticaNeueCyr-Medium');
+    color: #5b5b5b;
+  }
+}
+
+
+.page-accountant .PROTO {
+
+}
+
+
+.page-accountant .PROTO {
+
+}
+
+
+.page-accountant .PROTO {
+
+}
+
+
+.page-accountant .send_cv__form {
+  width: 100%;
+}
+
+
+// label
+.page-accountant .send_cv__input-label {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+
+// input
+.page-accountant .send_cv__input {
+
+  height: 40px;
+  font-size: 14px;
+  @include font(normal, 400, 17px, 28px, 'HelveticaNeueCyr-Medium');
+  color: #999;
+  border: 1px solid #5b5b5b;
+  outline: none;
+  text-overflow: ellipsis;
+
+}
+
+// name
+.page-accountant .send_cv__input-name {
+  @include font(normal, 700, 17px, 28px, 'HelveticaNeueCyr-Bold');
+  color: #5b5b5b;
+  margin-left: 20px;
+  margin-bottom: 0;
+
+  position: absolute;
+  top: -30px;
+}
+
+
+.page-accountant .PROTO {
+
+}
+
+
+.page-accountant .PROTO {
+
+}
+
+
+.page-accountant .PROTO {
+
+}
+
+// HelveticaNeueCyr-Medium
