@@ -2,9 +2,15 @@
 
 
 .page-single-service {
-  background: url("../img/main_bg4.jpg") center no-repeat;
-  @media #{$mobile-tablet} {
-    background: none;
+  // background: url("../img/main_bg4.jpg") center no-repeat;
+  // @media #{$mobile-tablet} {
+  //   background: none;
+  // }
+
+  & .wrapper {
+    @media #{$mobile-tablet} {
+      background: none !important;
+    }
   }
 }
 
