@@ -2,9 +2,22 @@
 
 
 .page-contacts {
-  background: url("../img/main_bg4.jpg") center no-repeat;
+  // background: url("../img/main_bg4.jpg") center no-repeat;
   @media #{$mobile-tablet} {
     background: none;
+  }
+}
+
+.page-contacts .modal-bg {
+  display: none;
+  // width: 55%;
+  // height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  @media #{$desktop-wide} {
+    display: block;
   }
 }
 

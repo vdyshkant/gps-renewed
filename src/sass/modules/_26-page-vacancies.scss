@@ -1,9 +1,9 @@
 /* === Page 'vacancies' === */
 
-.modal-bg {
+.page-vacancies .modal-bg {
   display: none;
-  width: 620px;
-  height: 920px;
+  // width: 620px;
+  // height: 920px;
   position: fixed;
   top: 0;
   right: 0;
@@ -11,8 +11,6 @@
   @media #{$desktop-wide} {
     display: block;
   }
-
-
 }
 
 .page-vacancies {
