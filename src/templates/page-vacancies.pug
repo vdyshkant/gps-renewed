@@ -35,8 +35,11 @@ append stylesheets
 block content
   .wrapper
 
-    //- include _modules/header
+    //- custom field:
+    //- img.modal-bg(src='https://i.snag.gy/qbuoD3.jpg', alt='')
+    img.modal-bg(src='img/026_bg.jpg', alt='')
 
+    //- include _modules/header
     .main-mask
     main.main
       .wrap
@@ -50,6 +53,10 @@ block content
               //- <== u can add additional class here.
 
           .content
+            img#background
+            #maincontent
+
+
             .inner
               //- time.content-pub-date(datetime="<дата и время>") 21.08.2019
               h1.title Garant Post Service приглашает

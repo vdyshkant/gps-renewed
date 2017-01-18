@@ -1,10 +1,23 @@
 /* === Page 'vacancies' === */
 
+.modal-bg {
+  display: none;
+  width: 620px;
+  height: 920px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  @media #{$desktop-wide} {
+    display: block;
+  }
 
+
+}
 
 .page-vacancies {
   @media #{$desktop-wide} {
-    background: url("../img/026_bg.jpg") right top no-repeat;
+    // background: url("../img/026_bg.jpg") right top no-repeat;
   }
   background: #fff;
 
