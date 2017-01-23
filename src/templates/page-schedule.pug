@@ -11,6 +11,7 @@ append config
   - var updateBodyClass = bodyClasses.push('page-schedule js-menu')
 
   //- - var GoogleFonts = 'Poiret+One'
+  - var GoogleFonts = GoogleFonts.concat('Quicksand')
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
   //- ...
 
@@ -25,19 +26,23 @@ append stylesheets
 block content
   .wrapper
 
-    //- custom field:
-    img.modal-bg(src='img/main_bg4.jpg', alt='')
-      
-    //- include _modules/header
+    #pagewrapper
 
-    .main-mask
-    main.main
-      include _modules/page-schedule/main
+      //- custom field:
+      img.modal-bg(src='img/main_bg4.jpg', alt='')
 
-    include _modules/page-schedule/menu
+      //- include _modules/header
 
-    include _modules/user-block
+      .main-mask
+      main.main
+        include _modules/page-schedule/main
 
-    include _modules/footer
+      include _modules/page-schedule/menu
 
+      include _modules/user-block
+
+      include _modules/footer
+
+  include _modules/burger
+  
 include _modules/modal-content

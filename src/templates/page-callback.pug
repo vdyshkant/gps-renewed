@@ -11,6 +11,7 @@ append config
   - var updateBodyClass = bodyClasses.push('page-callback js-menu')
 
   //- - var GoogleFonts = 'Poiret+One'
+  - var GoogleFonts = GoogleFonts.concat('Quicksand')
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
   //- ...
 
@@ -25,19 +26,23 @@ append stylesheets
 block content
   .wrapper
 
-    //- custom field:
-    img.modal-bg(src='img/main_bg4.jpg', alt='')
+    #pagewrapper
 
-    //- include _modules/header
+      //- custom field:
+      img.modal-bg(src='img/main_bg4.jpg', alt='')
 
-    .main-mask
-    main.main
-      include _modules/page-callback/callback-main
+      //- include _modules/header
 
-    include _modules/page-callback/callback-menu
+      .main-mask
+      main.main
+        include _modules/page-callback/callback-main
 
-    include _modules/user-block
+      include _modules/page-callback/callback-menu
 
-    include _modules/footer
+      include _modules/user-block
 
+      include _modules/footer
+
+  include _modules/burger
+  
 include _modules/modal-content

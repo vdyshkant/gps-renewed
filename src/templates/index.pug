@@ -15,7 +15,8 @@ append config
   - var updateBodyClass = bodyClasses.push('page-home js-bx')
 
   //- - var GoogleFonts = 'Poiret+One'
-  //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
+  - var GoogleFonts = GoogleFonts.concat('Quicksand')
+  //- - var GoogleFonts = GoogleFonts.concat('|Roboto:300,400,500,700&subset=cyrillic')
   //- ...
 
 append stylesheets
@@ -38,47 +39,50 @@ mixin svg(arr)
 block content
   .wrapper
 
+    #pagewrapper
 
-    //- include _modules/header
+      //- include _modules/header
 
-    .main-mask
-      h1.headline Современный сервис курьерских услуг
-    .head-mask
-    .head-backgrounds
-      .head-backgrounds__wrapper
-        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="0ms")
-        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="60ms")
-        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="120ms")
-        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="180ms")
-        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="240ms")
-        .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="320ms")
+      .main-mask
+        h1.headline Современный сервис курьерских услуг
+      .head-mask
+      .head-backgrounds
+        .head-backgrounds__wrapper
+          .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="0ms")
+          .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="60ms")
+          .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="120ms")
+          .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="180ms")
+          .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="240ms")
+          .head-backgrounds__column.wow.fadeInUp(data-wow-offset="150" data-wow-delay="320ms")
 
-    .tool-container
-      .tool__items
-        .tool__items__wrapper
-          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="50ms")
-            .i(aria-hidden="true")
-              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_01'}])
-            p Вызов курьера
-          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="150ms")
-            .i(aria-hidden="true")
-              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_02'}])
-            p Отслеживание
-          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="250ms")
-            .i(aria-hidden="true")
-              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_03'}])
-            p Тарифы и сроки
-          a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="350ms")
-            .i(aria-hidden="true")
-              +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_04'}])
-            p Тарифный калькулятор
-    main.main
-      include _modules/page-home/main
+      .tool-container
+        .tool__items
+          .tool__items__wrapper
+            a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="50ms")
+              .i(aria-hidden="true")
+                +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_01'}])
+              p Вызов курьера
+            a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="150ms")
+              .i(aria-hidden="true")
+                +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_02'}])
+              p Отслеживание
+            a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="250ms")
+              .i(aria-hidden="true")
+                +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_03'}])
+              p Тарифы и сроки
+            a.tool__item.wow.fadeInUp(data-wow-offset="10" data-wow-delay="350ms")
+              .i(aria-hidden="true")
+                +svg([{'class': 'icon', 'pathid': 'Layer_1', 'filename':'index-icon_04'}])
+              p Тарифный калькулятор
+      main.main
+        include _modules/page-home/main
 
-    include _modules/page-home/menu
+      include _modules/page-home/menu
 
-    include _modules/user-block
+      include _modules/user-block
 
-    include _modules/footer
+      include _modules/footer
+
+  include _modules/burger
 
 include _modules/modal-content

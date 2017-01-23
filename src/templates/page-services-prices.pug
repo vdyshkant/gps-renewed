@@ -11,6 +11,7 @@ append config
   - var updateBodyClass = bodyClasses.push('page-services-prices js-menu')
 
   //- - var GoogleFonts = 'Poiret+One'
+  - var GoogleFonts = GoogleFonts.concat('Quicksand')
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
   //- ...
 
@@ -25,17 +26,20 @@ append stylesheets
 block content
   .wrapper
 
+    #pagewrapper
 
-    //- include _modules/header
+      //- include _modules/header
 
-    .main-mask
-    main.main
-      include _modules/page-services-prices/services-prices-main
+      .main-mask
+      main.main
+        include _modules/page-services-prices/services-prices-main
 
-    include _modules/page-services-prices/services-prices-menu
+      include _modules/page-services-prices/services-prices-menu
 
-    include _modules/user-block
+      include _modules/user-block
 
-    include _modules/footer
+      include _modules/footer
 
+  include _modules/burger
+  
 include _modules/modal-content

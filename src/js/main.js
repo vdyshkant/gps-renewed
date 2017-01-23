@@ -52,29 +52,91 @@ $( document ).ready(function() {
 	})();
 
 
+  // ---------------------------------- skrollr
+  //$('body').attr('id','skrollr-body');
+  // var s = skrollr.init();
+  // window.onload = function() {
+  //   skrollr.init();
+  // }
+
   // burger menu
 	(function($) {
 
+
+    // ---------------------------------- skrollr
+      //$('body').attr('id','skrollr-body');
+      if ("ontouchstart" in document.documentElement) {
+        // touch devices
+      } else {
+        // setTimeout("skrollr.init()",1200);
+      }
+
+    // $('#pagefooter').css({ 'opacity':'0' });
+    $('#burger-content').css({ 'top':'-'+ ($('#burger-content').height()) +'px' });
+
 		var duration = 100;
 
+		// $('#burger').click(function(){
+		// 	$('#burger-content').fadeIn(duration);
+		// });
+
 		$('#burger').click(function(){
-			$('#burger-content').fadeIn(duration);
+      $('#burger-content').show().animate({ 'top': '0' },function(){
+          $('#pagewrapper').hide();
+          $('body').css({ 'height':'auto' });
+          if ("ontouchstart" in document.documentElement) {
+            $('body').css({ 'height':'auto' });
+          }
+      });
 		});
+
+    // -------------------------- navi
+    // function showNavi() {
+      //$('body, html').animate({ 'scrollTop':'0' });
+
+    // }
 
 		// hide when click close button
 		$('.burger-nav__close').click(function(){
-			$('#burger-content').fadeOut(duration);
+			// $('#burger-content').fadeOut(duration);
+
+
+        // $('#closerDesc').remove();
+      	// $('#navwrapperfooter').hide();
+      	$('#pagewrapper').show();
+      	$('#burger-content').animate({ 'top':'-'+ ($('#burger-content').height()) +'px' },function(){
+            $('#burger-content').hide();
+      		if ("ontouchstart" in document.documentElement) {
+      			$('body').css({ 'height':'auto' });
+      		}
+      	});
+
+
 		});
 
 		// hide modal-content when click out of modal-content block
 		$('#burger-content').click(function(){
-			$('#burger-content').fadeOut(duration);
+			// $('#burger-content').fadeOut(duration);
+      $('#pagewrapper').show();
+      $('#burger-content').animate({ 'top':'-'+ ($('#burger-content').height()) +'px' },function(){
+          $('#burger-content').hide();
+        if ("ontouchstart" in document.documentElement) {
+          $('body').css({ 'height':'auto' });
+        }
+      });
 		});
 
 		// hide when modal-content press Esc button
 		$('html body').on('keyup', function(e) {
 				if (e.keyCode === 27) {
-						$('#burger-content').fadeOut(duration);
+						// $('#burger-content').fadeOut(duration);
+            $('#pagewrapper').show();
+            $('#burger-content').animate({ 'top':'-'+ ($('#burger-content').height()) +'px' },function(){
+                $('#burger-content').hide();
+              if ("ontouchstart" in document.documentElement) {
+                $('body').css({ 'height':'auto' });
+              }
+            });
 				}
 		});
 
@@ -237,7 +299,7 @@ $(document).ready(function() {
 	if($('body').is('.page-terms')){
 
     // locale
-    	$.fn.fdatepicker.dates['ru'] = {
+    	$.fn.fdatepicker.dates["ru"] = {
     		days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
     		daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб", "Вск"],
     		daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
@@ -298,10 +360,10 @@ $(document).ready(function() {
 
           //- moment.js
 
-          var sendDate = $('#datePickInput').val().split('-')
-            , sendDay = parseInt(sendDate[0])
-            , sendMonth = parseInt(sendDate[1])-1
-            , sendYear = parseInt(sendDate[2]);
+          var sendDate = $('#datePickInput').val().split('-'),
+              sendDay = parseInt(sendDate[0]),
+              sendMonth = parseInt(sendDate[1])-1,
+              sendYear = parseInt(sendDate[2]);
 
 
 

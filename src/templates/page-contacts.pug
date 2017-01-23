@@ -11,6 +11,7 @@ append config
   - var updateBodyClass = bodyClasses.push('page-contacts js-menu')
 
   //- - var GoogleFonts = 'Poiret+One'
+  - var GoogleFonts = GoogleFonts.concat('Quicksand')
   //- - var GoogleFonts = GoogleFonts.concat('|Roboto:400,700&subset=cyrillic')
   //- ...
 
@@ -25,20 +26,23 @@ append stylesheets
 block content
   .wrapper
 
+    #pagewrapper
 
-    //- custom field:
-    img.modal-bg(src='img/main_bg4.jpg', alt='')
+      //- custom field:
+      img.modal-bg(src='img/main_bg4.jpg', alt='')
 
-    //- include _modules/header
+      //- include _modules/header
 
-    .main-mask
-    main.main
-      include _modules/page-contacts/contacts-main
+      .main-mask
+      main.main
+        include _modules/page-contacts/contacts-main
 
-    include _modules/page-contacts/contacts-menu
+      include _modules/page-contacts/contacts-menu
 
-    include _modules/user-block
+      include _modules/user-block
 
-    include _modules/footer
+      include _modules/footer
 
+  include _modules/burger
+  
 include _modules/modal-content
