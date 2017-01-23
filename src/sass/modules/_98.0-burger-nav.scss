@@ -13,6 +13,26 @@
   display: none;
   overflow: hidden;
   text-align: center;
+
+  @media #{$mobile} {
+    // margin-bottom: 5px;
+    // padding-top: 55px;
+
+    float: left;
+    position: absolute;
+    // top: -2500px;
+    left: 0;
+    z-index: 12000;
+    width: 100%;
+    color: #fff;
+    // display: none;
+    // display: none;
+    overflow: hidden;
+    text-align: center;
+
+    height: auto;
+    min-height: 100%;
+  }
 }
 .burger-wrapper {
   // display: block;
