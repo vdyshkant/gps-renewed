@@ -621,228 +621,191 @@ if($('body').is('.page-home')){
 
         var menu = document.querySelector("#menu");
 
-        // if sticked to top;
-        if (classie.has(menu,"sticked")) {
-
-          //     // !!only opened:
-          // if ($('#menu').is('.opened')) {
-          //
-          // } /**/
-
-
-        /**/
-        // if NOT sticked to top:
-        } else if (classie.has(menu,"unsticked")) {
-
-
-
-          //if opened:
-          if (classie.has(menu,"opened")) {
-            // hideMenuElements();
-            // hideMenuContentWhenUnHover();
-            // var menu = document.querySelector("#menu");
-            // classie.remove(menu,"opened");
-
-              // if unhover:
-              // window.onload = hideMenuContentWhenUnHover();
-              /**/
-          /**/
-          } else {  //if do not opened:
-
-
-                // if unhover:
-
-                /**/
-          } /**/
-
-
-
-        } /* eof 'if NOT sticked to top'*/
-
-
-
-        function initOffcanvas() {
-          window.onload = showMenuContentWhenOnHover();
-          window.onload = hideMenuContentWhenUnHover();
-        }
-
         // trigger upsplitting menu on hover:
         // window.onload = initOffcanvas();
 
-
-        function init() {
-
-            window.addEventListener('scroll', function(e){
-                var isHovered = $('#menu').is('.hovered'),
-                    distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                    shrinkOn = 20,
-                    menu = document.querySelector("#menu");
-                if (distanceY > shrinkOn) {
-                    if (classie.has(menu,"sticked") && classie.has(menu,"opened")) {
-                      classie.remove(menu,"sticked");
-                      classie.remove(menu,"opened");
-                    }
-                    classie.add(menu,"unsticked");
-                    classie.add(menu,"smaller");
-                    // showMenuContentWhenOnHover_init();
-                    hideMenuElements();
-                } else {
-                    if (classie.has(menu,"unsticked") && classie.has(menu,"smaller")) {
-                        classie.remove(menu,"unsticked");
-                        classie.remove(menu,"smaller");
-                    }
-                    classie.add(menu,"sticked");
-                    classie.add(menu,"opened");
-                    showMenuElements();
-                }
-            });
-        }
-
-        function showMenuContentWhenOnHover_init(){
-          $('#menu').mouseleave(function(){
-            if (!($('.logo__text').text() == 'GPS')) {
-              $('.logo__text').fadeOut('300', function() {
-                  var origin_1 = 'Grant Post Service';
-                  $('.logo__text').text(origin_1);
-
-                  $('.logo__text').css("font-size", "16px");
-                  $('.logo__text').fadeIn('300');
-              });
-            }
-            // hide menu items
-            $('.menu__sidebar__item__link__text').stop( true, true ).fadeOut(20);
-            // hide menu addresses
-            $('.menu__address').stop( true, true ).fadeOut(20);
-            // hide menu phones
-            $('.menu__phone').stop( true, true ).fadeOut(20);
-            // hide menu bottom btn
-            $('.menu__btn__link').stop( true, true ).fadeOut(20);
-          });
-        }
-
-        function showMenuContentWhenOnHover(){
-
-
-            $('#menu').mouseenter(function(){
-              var menu = document.querySelector("#menu").classList,
-                  isUnsticked = $('#menu').is('.unsticked'),
-                  isSmaller = $('#menu').is('.smaller');
-              if (isUnsticked && isSmaller) {
-                if (isSmaller) {
-                  menu.remove('smaller');
-                }
-                menu.add('opened');
-                // maximize logo
-                $('.logo__text').fadeOut('300', function() {
-                    var origin_1 = 'Grant Post Service';
-                    $('.logo__text').text(origin_1);
-
-                    $('.logo__text').css("font-size", "16px");
-                    $('.logo__text').fadeIn('300');
-                });
-                // show menu items
-                $('.menu__sidebar__item__link__text').stop( true, true ).delay(300).fadeIn(300);
-                // show menu addresses
-                $('.menu__address').stop( true, true ).delay(300).fadeIn(300);
-                // show menu phones
-                $('.menu__phone').stop( true, true ).delay(300).fadeIn(300);
-                // show menu bottom btn
-                $('.menu__btn__link').stop( true, true ).delay(300).fadeIn(300);
-              }
-            });
-
-
-        }
-
-        function ifMouseEntered(){
-          $('#menu').mouseenter(function(){
-            $('#menu').addClass('hovered');
-          });
-
-          $('#menu').mouseleave(function(){
-            $('#menu').removeClass('hovered');
-          });
-        }
-
-        function hideMenuContentWhenUnHover(){
-          $('#menu').mouseleave(function(){
-            var menu = document.querySelector("#menu").classList,
-                isUnsticked = $('#menu').is('.unsticked'),
-                isOpened = $('#menu').is('.opened');
-            if (isUnsticked && isOpened) {
-              if (isOpened) {
-                menu.remove('opened');
-              }
-              menu.add('smaller');
-              // minimize logo
-              if (!($('.logo__text').text() == 'GPS')) {
-                $('.logo__text').fadeOut('50', function() {
-                    var string_1 = 'GPS';
-                    $('.logo__text').text(string_1);
-
-                    $('.logo__text').css("font-size", "12px");
-                    $('.logo__text').fadeIn('300');
-                });
-              }
-              // hide menu items
-              $('.menu__sidebar__item__link__text').stop( true, true ).fadeOut(20);
-              // hide menu addresses
-              $('.menu__address').stop( true, true ).fadeOut(20);
-              // hide menu phones
-              $('.menu__phone').stop( true, true ).fadeOut(20);
-              // hide menu bottom btn
-              $('.menu__btn__link').stop( true, true ).fadeOut(20);
-              //
-            }
-          });
-        }
-
-        function hideMenuElements() {
-          // minimize logo
-          if (!($('.logo__text').text() == 'GPS')) {
-            $('.logo__text').fadeOut('50', function() {
-                var string_1 = 'GPS';
-                $('.logo__text').text(string_1);
-
-                $('.logo__text').css("font-size", "12px");
-                $('.logo__text').fadeIn('300');
-            });
-          }
-          // hide menu items
-          $('.menu__sidebar__item__link__text').stop( true, true ).fadeOut(20);
-          // hide menu addresses
-          $('.menu__address').stop( true, true ).fadeOut(20);
-          // hide menu phones
-          $('.menu__phone').stop( true, true ).fadeOut(20);
-          // hide menu bottom btn
-          $('.menu__btn__link').stop( true, true ).fadeOut(20);
-          //
-        }
-        function showMenuElements() {
-          // minimize logo
-          if ($('.logo__text').text() == 'GPS') {
-            $('.logo__text').fadeOut('300', function() {
-                var origin_1 = 'Grant Post Service';
-                $('.logo__text').text(origin_1);
-
-                $('.logo__text').css("font-size", "16px");
-                $('.logo__text').fadeIn('300');
-            });
-          }
-          // show menu items
-          $('.menu__sidebar__item__link__text').stop( true, true ).delay(300).fadeIn(300);
-          // show menu addresses
-          $('.menu__address').stop( true, true ).delay(300).fadeIn(300);
-          // show menu phones
-          $('.menu__phone').stop( true, true ).delay(300).fadeIn(300);
-          // show menu bottom btn
-          $('.menu__btn__link').stop( true, true ).delay(300).fadeIn(300);
-          //
-        }
-
-
-
 } /* eof 'if homepage' */
+
+
+function init() {
+
+  setTimeout(function(){
+
+    // precheck if menu is unsticked && opened onload
+    var isHovered = $('#menu').is('.hovered'),
+        distanceY = window.pageYOffset || document.body.scrollTop,
+        shrinkOn = 20,
+        menu = document.querySelector("#menu");
+    if (distanceY > shrinkOn) {
+        if (classie.has(menu,"sticked") && classie.has(menu,"opened")) {
+          classie.remove(menu,"sticked");
+          classie.remove(menu,"opened");
+        }
+        classie.add(menu,"unsticked");
+        classie.add(menu,"smaller");
+        // showMenuContentWhenOnHover_init();
+        hideMenuElements();
+    }
+
+  }, 2000);
+
+
+
+  window.addEventListener('scroll', function(e){
+      var isHovered = $('#menu').is('.hovered'),
+          isSticked = $('#menu').is('.sticked'),
+          isUnsticked = $('#menu').is('.unsticked'),
+          isSmaller = $('#menu').is('.smaller'),
+          isOpened = $('#menu').is('.opened'),
+          // distanceY = window.pageYOffset || document.documentElement.scrollTop,
+          distanceY = window.pageYOffset || document.body.scrollTop,
+          shrinkOn = 20,
+          menu = document.querySelector("#menu"); //here we have menu WITHOUT 'classList' param
+
+      if (isHovered) {
+        if (distanceY > shrinkOn) {
+          if (isSticked) {
+            classie.remove(menu,"sticked");
+          }
+          classie.add(menu,"unsticked");
+        } else if (distanceY <= shrinkOn) {
+          if (isUnsticked) {
+            classie.remove(menu,"unsticked");
+          }
+          classie.add(menu,"sticked");
+        }
+      }
+
+
+      if (!isHovered) {
+        if (distanceY > shrinkOn) {
+            if (isSticked && isOpened) {
+              classie.remove(menu,"sticked");
+              classie.remove(menu,"opened");
+            }
+            classie.add(menu,"unsticked");
+            classie.add(menu,"smaller");
+            hideMenuElements();
+        } else {
+            if (isUnsticked && isSmaller) {
+                classie.remove(menu,"unsticked");
+                classie.remove(menu,"smaller");
+            }
+            classie.add(menu,"sticked");
+            classie.add(menu,"opened");
+            showMenuElements();
+        }
+      }
+
+  });
+}
+
+
+function ifMouseEntered(){
+  $('#menu').mouseenter(function(){
+    $('#menu').addClass('hovered');
+  });
+
+  $('#menu').mouseleave(function(){
+    $('#menu').removeClass('hovered');
+  });
+}
+
+
+function showMenuContentWhenOnHover(){
+
+
+    $('#menu').mouseenter(function(){
+      var menu = document.querySelector("#menu").classList,
+          logotext = $('.logo__text').text(),
+          isUnsticked = $('#menu').is('.unsticked'),
+          isSmaller = $('#menu').is('.smaller');
+      if (isUnsticked && isSmaller) {
+        if (isSmaller) {
+          menu.remove('smaller');
+        }
+        menu.add('opened');
+        showMenuElements();
+      }
+    });
+
+
+}
+
+
+function hideMenuContentWhenUnHover(){
+  $('#menu').mouseleave(function(){
+    var menu = document.querySelector("#menu").classList,
+        isSticked = $('#menu').is('.sticked'),
+        isUnsticked = $('#menu').is('.unsticked'),
+        isSmaller = $('#menu').is('.smaller'),
+        distanceY = window.pageYOffset || document.body.scrollTop,
+        shrinkOn = 20,
+        isOpened = $('#menu').is('.opened');
+
+
+    if (distanceY <= shrinkOn) {
+      if (!isSticked) {
+        if (isUnsticked) {
+          menu.remove('unsticked');
+        }
+        menu.add('sticked');
+      }
+    } else {
+      if (isUnsticked && isOpened) {
+        if (isOpened) {
+          menu.remove('opened');
+        }
+        menu.add('smaller');
+        hideMenuElements();
+      }
+    } // eof else (distanceY <= shrinkOn)
+  });
+}
+
+function hideMenuElements() {
+  var isSmaller = $('#menu').is('.smaller');
+  // minimize logo
+  if (isSmaller) {
+    $('.logo__text').finish().fadeOut('50', function() {
+        var string_1 = 'GPS';
+        $('.logo__text').text(string_1);
+
+        $('.logo__text').finish().css("font-size", "12px");
+        $('.logo__text').finish().fadeIn('300');
+    });
+  }
+  // hide menu items
+  $('.menu__sidebar__item__link__text').stop( true, true ).fadeOut(20);
+  // hide menu addresses
+  $('.menu__address').stop( true, true ).fadeOut(20);
+  // hide menu phones
+  $('.menu__phone').stop( true, true ).fadeOut(20);
+  // hide menu bottom btn
+  $('.menu__btn__link').stop( true, true ).fadeOut(20);
+  //
+}
+function showMenuElements() {
+  // maximize logo
+  if ($('.logo__text').text() == 'GPS') {
+    $('.logo__text').finish().fadeOut('300', function() {
+        var origin_1 = 'Grant Post Service';
+        $('.logo__text').text(origin_1);
+
+        $('.logo__text').finish().css("font-size", "16px");
+        $('.logo__text').finish().fadeIn('300');
+    });
+  }
+  // show menu items
+  $('.menu__sidebar__item__link__text').stop( true, true ).delay(300).fadeIn(300);
+  // show menu addresses
+  $('.menu__address').stop( true, true ).delay(300).fadeIn(300);
+  // show menu phones
+  $('.menu__phone').stop( true, true ).delay(300).fadeIn(300);
+  // show menu bottom btn
+  $('.menu__btn__link').stop( true, true ).delay(300).fadeIn(300);
+  //
+}
 
 
 //*****
