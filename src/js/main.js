@@ -3,8 +3,6 @@ $( document ).ready(function() {
 
   (function() {
 
-    var isPageHome = $('.page-home');
-    // if (!isPageHome) {
     if($('body').is('.js-menu')){
       var string_1 = 'GPS';
       $('.logo__text').text(string_1);
@@ -12,7 +10,7 @@ $( document ).ready(function() {
 
       $('#menu').mouseenter(function(){
         // show logo
-        $('.logo__text').fadeOut('300', function() {
+        $('.logo__text').fadeOut('50', function() {
             var origin_1 = 'Grant Post Service';
             $('.logo__text').text(origin_1);
 
@@ -716,17 +714,29 @@ function showMenuContentWhenOnHover(){
 
 
     $('#menu').mouseenter(function(){
-      var menu = document.querySelector("#menu").classList,
-          logotext = $('.logo__text').text(),
-          isUnsticked = $('#menu').is('.unsticked'),
-          isSmaller = $('#menu').is('.smaller');
-      if (isUnsticked && isSmaller) {
-        if (isSmaller) {
-          menu.remove('smaller');
+
+      // var timer = 0;
+      // clearTimeout(timer);
+      // timer = setTimeout(function(){
+
+        var menu = document.querySelector("#menu").classList,
+            logotext = $('.logo__text').text(),
+            isUnsticked = $('#menu').is('.unsticked'),
+            isSmaller = $('#menu').is('.smaller');
+        if (isUnsticked && isSmaller) {
+          if (isSmaller) {
+            menu.remove('smaller');
+          }
+          menu.add('opened');
+          showMenuElements();
+                  // hideMenuContentWhenUnHover();
         }
-        menu.add('opened');
-        showMenuElements();
-      }
+
+
+      // },200);
+
+
+
     });
 
 
@@ -735,6 +745,9 @@ function showMenuContentWhenOnHover(){
 
 function hideMenuContentWhenUnHover(){
   $('#menu').mouseleave(function(){
+
+
+
     var menu = document.querySelector("#menu").classList,
         isSticked = $('#menu').is('.sticked'),
         isUnsticked = $('#menu').is('.unsticked'),
@@ -744,19 +757,19 @@ function hideMenuContentWhenUnHover(){
         isOpened = $('#menu').is('.opened');
 
 
-    if (distanceY <= shrinkOn) {
-      if (!isSticked) {
-        if (isUnsticked) {
-          menu.remove('unsticked');
-        }
-        menu.add('sticked');
+    if (distanceY <= shrinkOn && !isSticked) {
+      if (isUnsticked) {
+        menu.remove('unsticked');
       }
+      menu.add('sticked');
     } else {
       if (isUnsticked && isOpened) {
         if (isOpened) {
           menu.remove('opened');
         }
-        menu.add('smaller');
+        if (!isSmaller) {
+          menu.add('smaller');
+        }
         hideMenuElements();
       }
     } // eof else (distanceY <= shrinkOn)
@@ -767,13 +780,15 @@ function hideMenuElements() {
   var isSmaller = $('#menu').is('.smaller');
   // minimize logo
   if (isSmaller) {
-    $('.logo__text').finish().fadeOut('50', function() {
-        var string_1 = 'GPS';
-        $('.logo__text').text(string_1);
+    if ($('.logo__text').text() !== 'GPS') {
+      $('.logo__text').stop( true, true ).delay(200).fadeOut('50', function() {
+          var string_1 = 'GPS';
+          $('.logo__text').text(string_1);
 
-        $('.logo__text').finish().css("font-size", "12px");
-        $('.logo__text').finish().fadeIn('300');
-    });
+          $('.logo__text').stop( true, true ).delay(200).css("font-size", "12px");
+          $('.logo__text').stop( true, true ).delay(200).fadeIn('200');
+      });
+    }
   }
   // hide menu items
   $('.menu__sidebar__item__link__text').stop( true, true ).fadeOut(20);
@@ -787,23 +802,23 @@ function hideMenuElements() {
 }
 function showMenuElements() {
   // maximize logo
-  if ($('.logo__text').text() == 'GPS') {
-    $('.logo__text').finish().fadeOut('300', function() {
+  if ($('.logo__text').text() !== 'Grant Post Service') {
+    $('.logo__text').stop( true, true ).fadeOut('200', function() {
         var origin_1 = 'Grant Post Service';
         $('.logo__text').text(origin_1);
 
-        $('.logo__text').finish().css("font-size", "16px");
-        $('.logo__text').finish().fadeIn('300');
+        $('.logo__text').stop( true, true ).css("font-size", "16px");
+        $('.logo__text').stop( true, true ).fadeIn('200');
     });
   }
   // show menu items
-  $('.menu__sidebar__item__link__text').stop( true, true ).delay(300).fadeIn(300);
+  $('.menu__sidebar__item__link__text').stop( true, true ).delay(200).fadeIn(200);
   // show menu addresses
-  $('.menu__address').stop( true, true ).delay(300).fadeIn(300);
+  $('.menu__address').stop( true, true ).delay(200).fadeIn(200);
   // show menu phones
-  $('.menu__phone').stop( true, true ).delay(300).fadeIn(300);
+  $('.menu__phone').stop( true, true ).delay(200).fadeIn(200);
   // show menu bottom btn
-  $('.menu__btn__link').stop( true, true ).delay(300).fadeIn(300);
+  $('.menu__btn__link').stop( true, true ).delay(200).fadeIn(200);
   //
 }
 
