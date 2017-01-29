@@ -680,10 +680,15 @@ function init() {
             if (isSticked && isOpened) {
               classie.remove(menu,"sticked");
               classie.remove(menu,"opened");
+              // !! by moving the code below into if (isSticked && isOpened), we resolved issue with sharp mouseenter/-out and content blinking on scroll
+              classie.add(menu,"unsticked");
+              classie.add(menu,"smaller");
+              hideMenuElements();
             }
-            classie.add(menu,"unsticked");
-            classie.add(menu,"smaller");
-            hideMenuElements();
+            // classie.add(menu,"unsticked");
+            // classie.add(menu,"smaller");
+            // hideMenuElements();
+
         } else {
             if (isUnsticked && isSmaller) {
                 classie.remove(menu,"unsticked");
@@ -779,17 +784,19 @@ function hideMenuContentWhenUnHover(){
 function hideMenuElements() {
   var isSmaller = $('#menu').is('.smaller');
   // minimize logo
-  if (isSmaller) {
-    if ($('.logo__text').text() !== 'GPS') {
-      $('.logo__text').stop( true, true ).delay(200).fadeOut('50', function() {
-          var string_1 = 'GPS';
-          $('.logo__text').text(string_1);
+  // if (isSmaller) {
 
-          $('.logo__text').stop( true, true ).delay(200).css("font-size", "12px");
-          $('.logo__text').stop( true, true ).delay(200).fadeIn('200');
+      $('.logo__text').fadeOut('50', function() {
+          var string_1 = 'GPS';
+          if ($('.logo__text').text() !== 'GPS') {
+            $('.logo__text').text(string_1);
+
+            $('.logo__text').css("font-size", "12px");
+          }
+          $('.logo__text').fadeIn('200');
       });
-    }
-  }
+
+  // }
   // hide menu items
   $('.menu__sidebar__item__link__text').stop( true, true ).fadeOut(20);
   // hide menu addresses
@@ -802,15 +809,17 @@ function hideMenuElements() {
 }
 function showMenuElements() {
   // maximize logo
-  if ($('.logo__text').text() !== 'Grant Post Service') {
-    $('.logo__text').stop( true, true ).fadeOut('200', function() {
-        var origin_1 = 'Grant Post Service';
-        $('.logo__text').text(origin_1);
+  // if (!isSmaller) {
+    if ($('.logo__text').text() !== 'Grant Post Service') {
+      $('.logo__text').fadeOut('200', function() {
+          var origin_1 = 'Grant Post Service';
+          $('.logo__text').text(origin_1);
 
-        $('.logo__text').stop( true, true ).css("font-size", "16px");
-        $('.logo__text').stop( true, true ).fadeIn('200');
-    });
-  }
+          $('.logo__text').css("font-size", "16px");
+          $('.logo__text').fadeIn('200');
+      });
+    }
+  // }
   // show menu items
   $('.menu__sidebar__item__link__text').stop( true, true ).delay(200).fadeIn(200);
   // show menu addresses
