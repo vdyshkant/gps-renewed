@@ -173,12 +173,12 @@
 }
 
 .main {
-  & form {
+  & form.regular-form {
     @media #{$desktop} {
       width: 80%;
     }
   }
-  & form input {
+  & form input.regular-input {
     border: 1px solid rgba(40, 40, 40, 0.3);
     background: #ffffff;
     outline: none;
@@ -216,7 +216,7 @@
       z-index: -1;
     }
   }
-  & form select {
+  & form select.regular-select {
     border: none;
     outline: none;
     background: transparent;
@@ -243,7 +243,7 @@
 }
 
 .main {
-  & label {
+  & label.regular-label {
   margin-top: 25px;
   font-size: 16px;
   line-height: 24px;
@@ -267,7 +267,7 @@
 }
 
 .main {
-  & textarea {
+  & textarea.regular-textarea {
     width: 100%;
     min-height: 110px;
     max-height: 110px;

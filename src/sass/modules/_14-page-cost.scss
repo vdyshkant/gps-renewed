@@ -52,7 +52,7 @@
 
 
 .page-cost {
-  & label:last-child {
+  & label.regular-label:last-child {
     margin-bottom: 50px;
   }
 }
@@ -165,10 +165,10 @@
       float: right;
       margin-right: 0;
     }
-    & input {
+    & input.regular-input {
       line-height: 18px;
     }
-    & label {
+    & label.regular-label {
       margin: 0;
       padding: 0;
     }
@@ -189,7 +189,7 @@
 
 .page-cost {
   & .content-table-subcell {
-    & select {
+    & select.regular-select {
       text-transform: uppercase;
       line-height: 18px;
     }

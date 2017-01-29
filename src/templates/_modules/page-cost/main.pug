@@ -18,62 +18,127 @@ mixin breadcrumbs(arr)
       .inner
         h1.title Стоимость доставки
         p.sub-title Данный сервис поможет Вам узнать ориентировочную стоимость доставки Вашего отправления
-        form.form-content
-          .content-table
-            .content-table-body
-              .content-table-row
-                .content-table-cell.content-table-cell__left Маршрут
-                .content-table-cell.content-table-cell__right
-                  .content-table-subcell
-                    label
-                      span Откуда
-                      input(type="text")
-                  .content-table-subcell
-                    label
-                      span Куда
-                      input(type="text")
-                  .content-table-subcell
-              .content-table-row
-                .content-table-cell.content-table-cell__left Вид доставки
-                .content-table-cell.content-table-cell__right
-                  .content-table-subcell
-                    .select-essence
-                      select
-                        option Express
-                        option ems
-                        option dhl
-                        option aircraft
-                      i.fa.fa-angle-down(aria-hidden="true")
-                  .content-table-subcell
-                  .content-table-subcell
-              .content-table-row
-                .content-table-cell.content-table-cell__left Фактический вес
-                .content-table-cell.content-table-cell__right
-                  .content-table-subcell
-                    input(type="text")
-                  .content-table-subcell
-                  .content-table-subcell
-              .content-table-row
-                .content-table-cell.content-table-cell__left Габариты доставки
-                .content-table-cell.content-table-cell__right
-                  .content-table-subcell
-                    label
-                      span Длина
-                      input(type="text")
-                  .content-table-subcell
-                    label
-                      span Ширина
-                      input(type="text")
-                  .content-table-subcell
-                    label
-                      span Высота
-                      input(type="text")
-              .content-table-row
-                .content-table-cell.content-table-cell__left Обьявленная стоимость
-                .content-table-cell.content-table-cell__right
-                  .content-table-subcell
-                    input(type="text")
-                  .content-table-subcell
-                  .content-table-subcell
-          button.btn.btn--terms(type="submit") Расcчитать стоимость
-          a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"]').val('');") Очистить
+        //- form.form-content
+        //-   .content-table
+        //-     .content-table-body
+        //-       .content-table-row
+        //-         .content-table-cell.content-table-cell__left Маршрут
+        //-         .content-table-cell.content-table-cell__right
+        //-           .content-table-subcell
+        //-             label
+        //-               span Откуда
+        //-               input(type="text")
+        //-           .content-table-subcell
+        //-             label
+        //-               span Куда
+        //-               input(type="text")
+        //-           .content-table-subcell
+        //-       .content-table-row
+        //-         .content-table-cell.content-table-cell__left Вид доставки
+        //-         .content-table-cell.content-table-cell__right
+        //-           .content-table-subcell
+        //-             .select-essence
+        //-               select
+        //-                 option Express
+        //-                 option ems
+        //-                 option dhl
+        //-                 option aircraft
+        //-               i.fa.fa-angle-down(aria-hidden="true")
+        //-           .content-table-subcell
+        //-           .content-table-subcell
+        //-       .content-table-row
+        //-         .content-table-cell.content-table-cell__left Фактический вес
+        //-         .content-table-cell.content-table-cell__right
+        //-           .content-table-subcell
+        //-             input(type="text")
+        //-           .content-table-subcell
+        //-           .content-table-subcell
+        //-       .content-table-row
+        //-         .content-table-cell.content-table-cell__left Габариты доставки
+        //-         .content-table-cell.content-table-cell__right
+        //-           .content-table-subcell
+        //-             label
+        //-               span Длина
+        //-               input(type="text")
+        //-           .content-table-subcell
+        //-             label
+        //-               span Ширина
+        //-               input(type="text")
+        //-           .content-table-subcell
+        //-             label
+        //-               span Высота
+        //-               input(type="text")
+        //-       .content-table-row
+        //-         .content-table-cell.content-table-cell__left Обьявленная стоимость
+        //-         .content-table-cell.content-table-cell__right
+        //-           .content-table-subcell
+        //-             input(type="text")
+        //-           .content-table-subcell
+        //-           .content-table-subcell
+        //-   button.btn.btn--terms(type="submit") Расcчитать стоимость
+        //-   a.btn--clear(href="javascript:void(0)" onclick="$('input[type=\"text\"]').val('');") Очистить
+        form(action='')
+          .container
+            .form-group
+              .row
+                .col-md-6.col-sm-6.col-xs-6
+                  label(for='select_from') Откуда
+                  select#select_from.select2.select-from(name='')
+                .col-md-6.col-sm-6.col-xs-6
+                  label(for='select_to') Куда
+                  select#select_to.select2.select-to(name='')
+            .form-group
+              .row
+                .col-md-6.col-sm-6.col-xs-6
+                  label(for='service_type') Вид доставки
+                  select#service_type.service-type(name='service_type', disabled='')
+                    option(value='1') "EXPRESS" (авиа)
+                    option(value='2') “Express 12-00” (авиа)
+                    option(value='3') Доставка жд транспортом
+                .col-md-3.col-sm-3.col-xs-3
+                  label(for='weight') Вес
+                  input#weight.weight(type='text', pattern='^[0-9,.]+$', required='')
+                .col-md-3.col-sm-3.col-xs-3
+                  label(for='units') Единицы
+                  select#units.units(name='units')
+                    option(value='1000') кг
+                    option(value='1') г
+            .form-group
+              .row
+                .col-md-4.col-sm-4.col-xs-4
+                  label(for='length') Длина (см)
+                  input#length.length(type='text', pattern='[0-9]+', maxlength='5')
+                .col-md-4.col-sm-4.col-xs-4
+                  label(for='width') Ширина (см)
+                  input#width.width(type='text', pattern='[0-9]+', maxlength='5')
+                .col-md-4.col-sm-4.col-xs-4
+                  label(for='height') Высота (см)
+                  input#height.height(type='text', pattern='[0-9]+', maxlength='5')
+            .form-group
+              .row
+                .col-md-12.col-sm-12.col-xs-12
+                  label(for='declared_val') Объявленная стоимость (тг)
+                  input#declared_val.declared-val(type='text', value='', maxlength='7')
+            .form-group
+              .row
+                .col-md-4.col-sm-4.col-xs-4
+                  input#lift_to_floor.lift_to_floor(type='checkbox')
+                  label(for='lift_to_floor') Подъем на этаж
+                .col-md-4.col-sm-4.col-xs-4
+                  label(for='floors') Количество этажей
+                  input#floors.floors(type='text', pattern='[1-9]+', maxlength='2', disabled='', title='введите число')
+            .form-group
+              .row
+                .col-md-12.col-sm-12.col-xs-12
+                  input#fragile.fragile(type='checkbox', value='1')
+                  label(for='fragile') гриф "Осторожно стекло", "Не кантовать", "Сверху не ставить"
+                .col-md-12.col-sm-12.col-xs-12
+                  input#temperature.temperature(type='checkbox', value='1')
+                  label(for='temperature') гриф "Температурный режим"
+                .col-md-12.col-sm-12.col-xs-12
+                  input#holidays.holidays(type='checkbox', value='1')
+                  label(for='holidays') доставка отправлений в выходные и праздничные дни
+            .row
+              .col-md-12.col-sm-12.col-xs-12
+                button.btn.calculate(type='submit', disabled='') Рассчитать
+                span.result
