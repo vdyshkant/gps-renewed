@@ -87,58 +87,112 @@ mixin breadcrumbs(arr)
                 .col-md-6.col-sm-6.col-xs-6
                   label(for='select_to') Куда
                   select#select_to.select2.select-to(name='')
-            .form-group
-              .row
-                .col-md-6.col-sm-6.col-xs-6
-                  label(for='service_type') Вид доставки
-                  select#service_type.service-type(name='service_type', disabled='')
-                    option(value='1') "EXPRESS" (авиа)
-                    option(value='2') “Express 12-00” (авиа)
-                    option(value='3') Доставка жд транспортом
-                .col-md-3.col-sm-3.col-xs-3
-                  label(for='weight') Вес
-                  input#weight.weight(type='text', pattern='^[0-9,.]+$', required='')
-                .col-md-3.col-sm-3.col-xs-3
-                  label(for='units') Единицы
-                  select#units.units(name='units')
-                    option(value='1000') кг
-                    option(value='1') г
-            .form-group
-              .row
-                .col-md-4.col-sm-4.col-xs-4
-                  label(for='length') Длина (см)
-                  input#length.length(type='text', pattern='[0-9]+', maxlength='5')
-                .col-md-4.col-sm-4.col-xs-4
-                  label(for='width') Ширина (см)
-                  input#width.width(type='text', pattern='[0-9]+', maxlength='5')
-                .col-md-4.col-sm-4.col-xs-4
-                  label(for='height') Высота (см)
-                  input#height.height(type='text', pattern='[0-9]+', maxlength='5')
-            .form-group
+            .long-distance
+              .form-group
+                .row
+                  .col-md-6.col-sm-6.col-xs-6
+                    label(for='service_type') Вид доставки
+                    select#service_type.service-type(name='service_type', disabled='')
+                      option(value='1') "EXPRESS" (авиа)
+                      option(value='2') “Express 12-00” (авиа)
+                      option(value='3') Доставка жд транспортом
+                  .col-md-3.col-sm-3.col-xs-3
+                    label(for='weight') Масса
+                    input#weight.weight(type='text', pattern='^[0-9,.]+$', required='')
+                  .col-md-3.col-sm-3.col-xs-3
+                    label(for='units') Единицы
+                    select#units.units(name='units')
+                      option(value='1000') кг
+                      option(value='1') г
+              .form-group
+                .row
+                  .col-md-4.col-sm-4.col-xs-4
+                    label(for='length') Длина (см)
+                    input#length.length(type='text', pattern='[0-9]+', maxlength='5')
+                  .col-md-4.col-sm-4.col-xs-4
+                    label(for='width') Ширина (см)
+                    input#width.width(type='text', pattern='[0-9]+', maxlength='5')
+                  .col-md-4.col-sm-4.col-xs-4
+                    label(for='height') Высота (см)
+                    input#height.height(type='text', pattern='[0-9]+', maxlength='5')
+              .form-group
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    label(for='declared_val') Объявленная стоимость (тг)
+                    input#declared_val.declared-val(type='text', value='', maxlength='7')
+              .form-group
+                .row
+                  .col-md-4.col-sm-4.col-xs-4
+                    input#lift_to_floor.lift_to_floor(type='checkbox')
+                    label(for='lift_to_floor') Подъем на этаж
+                  .col-md-4.col-sm-4.col-xs-4
+                    label(for='floors') Количество этажей
+                    input#floors.floors(type='text', pattern='[1-9]+', maxlength='2', disabled='', title='введите число')
+              .form-group
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    input#fragile.fragile(type='checkbox', value='1')
+                    label(for='fragile') гриф "Осторожно стекло", "Не кантовать", "Сверху не ставить"
+                  .col-md-12.col-sm-12.col-xs-12
+                    input#temperature.temperature(type='checkbox', value='1')
+                    label(for='temperature') гриф "Температурный режим"
+                  .col-md-12.col-sm-12.col-xs-12
+                    input#holidays.holidays(type='checkbox', value='1')
+                    label(for='holidays') доставка отправлений в выходные и праздничные дни
               .row
                 .col-md-12.col-sm-12.col-xs-12
-                  label(for='declared_val') Объявленная стоимость (тг)
-                  input#declared_val.declared-val(type='text', value='', maxlength='7')
-            .form-group
+                  button.btn.calculate-long-distance(type='submit', disabled='') Рассчитать
+                  span.result.result-long-distance
+            .in-city
+              .form-group
+                .row
+                  .col-md-6.col-sm-6.col-xs-6
+                    label(for='in_city_types') Доставка по городу
+                    select#in_city_types.in-city-types(name='')
+                      option(value='0', selected='') Выберите тип груза
+                      option(value='1') Доставка корреспонденции по городу
+                      option(value='2') Доставка налоговой и статистической отчетности
+                      option(value='3') Доставка посылок по городу
+              .correspondence.incity-tab(data-tab='1')
+                .form-group
+                  .row
+                    .col-md-6.col-sm-6.col-xs-6
+                      label(for='deliveries') Количество доставок
+                      input#deliveries.deliveries(type='text', pattern='[1-9]+', maxlength='5', title='введите число')
+                      span.warn
+                    .col-md-6.col-sm-6.col-xs-6
+                      label(for='pack_weigth') Вес каждого пакета (г)
+                      input#pack_weigth.pack-weight(type='text', pattern='[1-9]+', maxlength='4', title='введите число')
+                      span.hint прим.: пакеты принимаются до 2,0 кг.
+                .form-group
+                  .row
+                    .col-md-12.col-sm-12.col-xs-12
+                      label(for='ensure_correspondence') Страховая сумма за пакет (тг)
+                      input#ensure_correspondence.ensure-correspondence.ensure-sum(type='text', pattern='[1-9]+', title='введите число')
+              .tax-reports.incity-tab(data-tab='2')
+                .form-group
+                  .row
+                    .col-md-12.col-sm-12.col-xs-12
+                      input#one_day.one-day(type='radio', name='delivery_period', value='0', checked='checked')
+                      label(for='one_day') доставка в течении суток
+                      input#one_hour.one-hour(type='radio', name='delivery_period', value='1')
+                      label(for='one_hour') доставка в течении одного часа
+                .form-group
+                  .row
+                    .col-md-12.col-sm-12.col-xs-12
+                      label(for='ensure_tax_reports') Страховая сумма за пакет (тг)
+                      input#ensure_tax_reports.ensure-tax-reports.ensure-sum(type='text', pattern='[1-9]+', title='введите число')
+              .parcel.incity-tab(data-tab='3')
+                .form-group
+                  .row
+                    .col-md-6.col-sm-6.col-xs-6
+                      label(for='weight_parsel') Вес (кг)
+                      input#weight_parsel.weight-parsel(type='text', pattern='[1-9]{1,3}', maxlength='3', required='', title='введите число')
+                      span.hint прим.: посылки принимаются до 100 кг., доставка осуществляется в течении суток
+                    .col-md-6.col-sm-6.col-xs-6
+                      label(for='ensure_parcel') Страховая сумма за посылку (тг)
+                      input#ensure_parcel.ensure-parcel.ensure-sum(type='text', pattern='[1-9]+', required='', title='введите число')
               .row
-                .col-md-4.col-sm-4.col-xs-4
-                  input#lift_to_floor.lift_to_floor(type='checkbox')
-                  label(for='lift_to_floor') Подъем на этаж
-                .col-md-4.col-sm-4.col-xs-4
-                  label(for='floors') Количество этажей
-                  input#floors.floors(type='text', pattern='[1-9]+', maxlength='2', disabled='', title='введите число')
-            .form-group
-              .row
                 .col-md-12.col-sm-12.col-xs-12
-                  input#fragile.fragile(type='checkbox', value='1')
-                  label(for='fragile') гриф "Осторожно стекло", "Не кантовать", "Сверху не ставить"
-                .col-md-12.col-sm-12.col-xs-12
-                  input#temperature.temperature(type='checkbox', value='1')
-                  label(for='temperature') гриф "Температурный режим"
-                .col-md-12.col-sm-12.col-xs-12
-                  input#holidays.holidays(type='checkbox', value='1')
-                  label(for='holidays') доставка отправлений в выходные и праздничные дни
-            .row
-              .col-md-12.col-sm-12.col-xs-12
-                button.btn.calculate(type='submit', disabled='') Рассчитать
-                span.result
+                  button.btn.calculate-incity(type='submit', disabled='') Рассчитать
+                  span.result.result-incity
