@@ -59,9 +59,9 @@ Calculator.prototype.checkDeliveryType = function(){
     , calculateBtn = this.container.find('.calculate');
 
   // Check if both cities selected
-  if(
-    _from.length<1 ||
-    _to.length<1
+  if (
+    _from.length == -1 ||
+    _to.length == -1 
   ){
     deliveryType.prop('disabled', true);
     calculateBtn.prop('disabled', true);

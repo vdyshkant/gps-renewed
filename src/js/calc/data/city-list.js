@@ -1,5 +1,5 @@
 window.cities = {
-  "express": [
+    "express": [
     [
       "г. Алматы",
       "г. Капшагай",
