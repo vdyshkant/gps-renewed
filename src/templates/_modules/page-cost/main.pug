@@ -120,11 +120,12 @@ mixin breadcrumbs(arr)
                   .col-md-12.col-sm-12.col-xs-12
                     label(for='declared_val') Объявленная стоимость (тг)
                     input#declared_val.declared-val(type='text', value='', maxlength='7')
+                    label *по умолчанию - 150 000 тг, максимальное значение - 1,5 млн тг., в стоимость доставки добавляется 1% от страховой суммы
               .form-group
                 .row
                   .col-md-4.col-sm-4.col-xs-4
                     input#lift_to_floor.lift_to_floor(type='checkbox')
-                    label(for='lift_to_floor') Подъем на этаж
+                    label(for='lift_to_floor') Подъем на этаж (500 тг за этаж, если больше 20 кг)
                   .col-md-4.col-sm-4.col-xs-4
                     label(for='floors') Количество этажей
                     input#floors.floors(type='text', pattern='[1-9]+', maxlength='2', disabled='', title='введите число')
@@ -132,13 +133,13 @@ mixin breadcrumbs(arr)
                 .row
                   .col-md-12.col-sm-12.col-xs-12
                     input#fragile.fragile(type='checkbox', value='1')
-                    label(for='fragile') гриф "Осторожно стекло", "Не кантовать", "Сверху не ставить"
+                    label(for='fragile') гриф "Осторожно стекло", "Не кантовать", "Сверху не ставить" (коэффициент 1,5)
                   .col-md-12.col-sm-12.col-xs-12
                     input#temperature.temperature(type='checkbox', value='1')
-                    label(for='temperature') гриф "Температурный режим"
+                    label(for='temperature') гриф "Температурный режим" (коэффициент 1,5)
                   .col-md-12.col-sm-12.col-xs-12
                     input#holidays.holidays(type='checkbox', value='1')
-                    label(for='holidays') доставка отправлений в выходные и праздничные дни
+                    label(for='holidays') доставка отправлений в выходные и праздничные дни (коэффициент 2)
               .row
                 .col-md-12.col-sm-12.col-xs-12
                   button.btn.calculate-long-distance(type='submit', disabled='') Рассчитать
